@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="90px" height="60px" viewBox="0 0 90 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>programming copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Programming" transform="translate(-146.000000, -43.000000)">
+            <g id="programming-copy" transform="translate(146.000000, 43.000000)">
+                <rect id="Rectangle-14" fill="#009966" opacity="0.800000012" x="4.02985075" y="0" width="81.6716418" height="59.7333333" rx="2.14925373"></rect>
+                <path d="M0,54.4 L37.3581267,54.4 L37.3581267,54.4 C37.312827,55.0244655 37.7823336,55.5674176 38.4067991,55.6127173 C38.4340951,55.6146974 38.4614538,55.6156885 38.4888216,55.6156885 L51.5139673,55.6156885 C52.1906188,55.6156885 52.7439929,55.0764258 52.761468,54.4 L90,54.4 L90,57.8507463 C90,59.0377463 89.0377463,60 87.8507463,60 L2.14925373,60 C0.962253672,60 2.80990084e-15,59.0377463 2.66453526e-15,57.8507463 L0,54.4 Z" id="Rectangle-15" fill="#004D33"></path>
+                <g id="Group-2" transform="translate(18.537313, 9.066667)">
+                    <path d="M0.185470526,1.20193286 C-0.0819117707,0.905844091 -0.057273457,0.450288123 0.24050174,0.184420127 C0.538276937,-0.0814478693 0.996427608,-0.0569490929 1.2638099,0.239139676 L5.14924229,4.54171657 C5.40652233,4.82661848 5.39476124,5.26185157 5.12246602,5.53260467 L1.23703363,9.39603219 C0.95404656,9.67741658 0.495233871,9.67741658 0.212246803,9.39603219 C-0.0707402639,9.1146478 -0.0707402639,8.65843356 0.212246803,8.37704917 L3.61210075,4.99645006 L0.185470526,1.20193286 Z" id="Path-6" fill="#99FFDD" fill-rule="nonzero"></path>
+                    <path d="M10.0240997,4.92362031 L52.5421195,4.92362031" id="Line" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                    <path d="M0.479586998,15.2512141 L52.5421195,15.2512141" id="Line-Copy" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                    <path d="M0.479586998,25.5788079 L52.5421195,25.5788079" id="Line-Copy-2" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                    <path d="M0.479586998,35.9064018 L52.5421195,35.9064018" id="Line-Copy-3" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -6,7 +6,7 @@ return [
     'dashboard-title'                       => 'Welcome to your project dashboard',
 
     // partials-header
-    'partials-header-title'                 => 'QuickAdmin en',
+    'partials-header-title'                 => 'Dashboard',
 
     // partials-sidebar
     'partials-sidebar-menu'                 => 'Menu',
@@ -16,7 +16,7 @@ return [
     'partials-sidebar-logout'               => 'Logout',
 
     // partials-topbar
-    'partials-topbar-title'                 => 'QuickAdmin en',
+    'partials-topbar-title'                 => 'Dashboard',
 
     // users-create
     'users-create-create_user'              => 'Create user',
@@ -81,4 +81,3 @@ return [
     'roles-controller-successfully_deleted' => 'Role was successfully deleted!',
 
 ];
-

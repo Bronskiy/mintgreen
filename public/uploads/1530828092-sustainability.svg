@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="54px" height="80px" viewBox="0 0 54 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Sustainability" transform="translate(-164.000000, -17.000000)">
+            <circle id="Oval" fill="#F6F6F6" cx="191" cy="191" r="191"></circle>
+            <g id="commissioning-copy" transform="translate(164.000000, 17.000000)">
+                <rect id="Rectangle-16" fill="#009966" x="0" y="6.08695652" width="53.0434783" height="73.9130435" rx="4.51977401"></rect>
+                <rect id="Rectangle-17" fill="#00BF80" x="6.08695652" y="8.69565217" width="41.7391304" height="65.2173913" rx="3.38983051"></rect>
+                <path d="M25.4243413,24.2614454 L40.6393862,24.2614454" id="Line" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M25.4243413,29.4788367 L40.6393862,29.4788367" id="Line-Copy-6" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M25.4243413,40.7831846 L40.6393862,40.7831846" id="Line-Copy-4" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M25.4243413,46.0005759 L40.6393862,46.0005759" id="Line-Copy-7" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M25.4243413,62.522315 L40.6393862,62.522315" id="Line-Copy-8" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M25.4243413,57.3049237 L40.6393862,57.3049237" id="Line-Copy-5" stroke="#E6FFF7" stroke-width="1.92090401" stroke-linecap="round"></path>
+                <path d="M23.2463768,3.5982009 C23.2463768,1.61096942 24.9074653,0 26.9565217,0 C29.0055782,0 30.6666667,1.61096942 30.6666667,3.5982009 L38.6096782,3.5982009 C39.8577793,3.5982009 40.8695652,4.60998678 40.8695652,5.85808791 L40.8695652,10.7835913 C40.8695652,12.0316924 39.8577793,13.0434783 38.6096782,13.0434783 L15.3033653,13.0434783 C14.0552641,13.0434783 13.0434783,12.0316924 13.0434783,10.7835913 L13.0434783,5.85808791 C13.0434783,4.60998678 14.0552641,3.5982009 15.3033653,3.5982009 L23.2463768,3.5982009 Z M26.9565217,4.04797601 C27.4687859,4.04797601 27.884058,3.64523366 27.884058,3.14842579 C27.884058,2.65161792 27.4687859,2.24887556 26.9565217,2.24887556 C26.4442576,2.24887556 26.0289855,2.65161792 26.0289855,3.14842579 C26.0289855,3.64523366 26.4442576,4.04797601 26.9565217,4.04797601 Z" id="Combined-Shape" fill="#99FFDD"></path>
+                <rect id="Rectangle-19" stroke="#FFFFFF" stroke-width="1.1299435" x="10.1301891" y="22.3041022" width="8.43527389" height="8.43527389" rx="3.38983051"></rect>
+                <rect id="Rectangle-19-Copy" stroke="#FFFFFF" stroke-width="1.1299435" x="10.1301891" y="38.8258413" width="8.43527389" height="8.43527389" rx="3.38983051"></rect>
+                <rect id="Rectangle-19-Copy-2" stroke="#FFFFFF" stroke-width="1.1299435" x="10.1301891" y="54.4780152" width="8.43527389" height="8.43527389" rx="3.38983051"></rect>
+                <polyline id="Path-7" stroke="#99FFDD" stroke-width="1.69491525" stroke-linecap="round" stroke-linejoin="round" points="12.173913 26.9911716 14.5623931 29.5652174 20.8695652 20.8695652"></polyline>
+                <polyline id="Path-7-Copy" stroke="#99FFDD" stroke-width="1.69491525" stroke-linecap="round" stroke-linejoin="round" points="12.173913 42.6433455 14.5623931 45.2173913 20.8695652 36.5217391"></polyline>
+                <polyline id="Path-7-Copy-2" stroke="#99FFDD" stroke-width="1.69491525" stroke-linecap="round" stroke-linejoin="round" points="12.173913 58.2955194 14.5623931 60.8695652 20.8695652 52.173913"></polyline>
+            </g>
+            <text id="Sustainability-Headq" font-family="Helvetica" font-size="24" font-weight="normal" fill="#0B424D">
+                <tspan x="120.294922" y="115">Sustainability</tspan>
+                <tspan x="261.705078" y="115" font-size="14"></tspan>
+                <tspan x="191" y="144" font-size="10"></tspan>
+                <tspan x="82.0556641" y="156" font-size="14">Headquartered in British Columbia, </tspan>
+                <tspan x="66.8730469" y="173" font-size="14">Canada, MintGreen is at an epicenter of </tspan>
+                <tspan x="63.7661133" y="190" font-size="14">environmentally friendly, clean energy. In </tspan>
+                <tspan x="59.8662109" y="207" font-size="14">addition to sustainably sourced power, our </tspan>
+                <tspan x="64.1762695" y="224" font-size="14">facilities utilize the latest most electrically </tspan>
+                <tspan x="69.6074219" y="241" font-size="14">efficient cryptomining technologies. We </tspan>
+                <tspan x="62.2075195" y="258" font-size="14">further reduce our environmental footprint </tspan>
+                <tspan x="56.3867188" y="275" font-size="14">via innovative waste heat recovery systems </tspan>
+                <tspan x="67.2592773" y="292" font-size="14">and identify business synergies to apply </tspan>
+                <tspan x="148.203613" y="309" font-size="14">them at profit.</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

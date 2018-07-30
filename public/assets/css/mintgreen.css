@@ -1,0 +1,268 @@
+/*======================================
+[ CSS Table of contents ]
+01. Header
+02. About
+03. Product
+04. Request
+05. Invest
+06. Team
+07. Footer
+========================================*/
+body{
+  color: #0b424d;
+  font-family: 'Open Sans', sans-serif;
+}
+a{
+  color: #00bf80;
+}
+{
+  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+.text-center{
+  text-align: center;
+}
+/*======================================
+01. Header
+========================================*/
+.navbar-brand img{
+  width: 166px;
+}
+nav{
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(121,121,121,0.16);
+  -moz-box-shadow: 0px 3px 5px 0px rgba(121,121,121,0.16);
+  box-shadow: 0px 3px 5px 0px rgba(121,121,121,0.16);
+}
+.navbar-nav .nav-link{
+  color: #198ea6;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar .btn{
+  min-width: 160px;
+  margin-left: 15px;
+}
+.navbar .btn-outline-primary{
+  color: #00bf80;
+  border: 2px solid #00bf80;
+  border-radius: 19px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.navbar .btn-outline-secondary{
+  color: #ffffff;
+  border: 2px solid #00bf80;
+  background-color: #00bf80;
+  border-radius: 19px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/*======================================
+02. About
+========================================*/
+.about-feature-item{
+  border-radius: 50%;
+  box-shadow: 0 9px 62px 0 rgba(36, 36, 36, 0.17);
+}
+.about-feature-item img{
+  display: flex;
+  margin: 0 auto;
+}
+.hover-open{
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+}
+.about-feature-item:hover .hover-open{
+  opacity: 1;
+  visibility: visible;
+}
+
+/*======================================
+03. Product
+========================================*/
+.swiper-wrapper{
+  width: 60%;
+  box-shadow: 0 9px 62px 0 rgba(36, 36, 36, 0.37);
+  margin: 0 auto;
+}
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+.gallery-thumbs {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+.gallery-thumbs .swiper-slide {
+  width: 25%;
+  min-height: 150px;
+  height: 100%;
+  opacity: 0.4;
+}
+.gallery-thumbs .swiper-slide-active {
+  opacity: 1;
+}
+/*======================================
+04. Request
+========================================*/
+.modal{
+  z-index: 1020;
+}
+.modal-backdrop{
+  z-index: 1010;
+}
+.modal-dialog{
+  margin: 58px 0 0;
+  width: 100%;
+  max-width: unset;
+}
+.modal-content{
+  border-radius: 0;
+  border: unset;
+}
+.modal-header{
+  background-color: #00bf80;
+  color: #ffffff;
+  border-radius: 0 0 50% 50%;
+}
+.modal-title{
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  margin: 25px auto;
+}
+.modal .close{
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  padding: 6px;
+  opacity: 1;
+}
+.modal .close span{
+  color: #fff;
+}
+.request-form input{
+  border: unset;
+  border-bottom: 1px solid #6b6b6b;
+  border-radius: 0;
+}
+.request-form textarea {
+  background-color: #e5f8f2;
+  border: 1px solid #e5f8f2;
+  border-radius: 10px;
+}
+/*======================================
+05. Invest
+========================================*/
+
+
+/*======================================
+06. Team
+========================================*/
+.team-item img{
+  width: 120px;
+  border-radius: 50%;
+}
+
+/*======================================
+07. Footer
+========================================*/
+footer{
+  color: #ffffff;
+  padding: 55px 0 25px;
+  background-color: #00bf80;
+  -webkit-box-shadow: inset 0px 32px 25px -18px rgba(0,0,0,0.26);
+  -moz-box-shadow: inset 0px 32px 25px -18px rgba(0,0,0,0.26);
+  box-shadow: inset 0px 32px 25px -18px rgba(0,0,0,0.26);
+}
+footer a{
+  color: #ffffff;
+}
+footer a:hover{
+  text-decoration: none;
+}
+footer hr{
+  border-color: #ffffff;
+}
+footer ul.list-inline li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+footer .copyright {
+  font-size: 14px;
+}
+footer ul.social-bottom li a{
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  padding: 5px;
+  font-size: 19px;
+}
+.subscribe-form .input-group{
+  border: 1px solid #ffffff;
+  border-radius: 22px;
+  padding: 2px;
+}
+.subscribe-form .input-group .btn{
+  background-color: #ffffff;
+  color: #00bf80;
+  border: 1px solid #ffffff;
+  border-radius: 19px;
+  margin: 2px;
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.subscribe-form .input-group .form-control{
+  background-color: transparent;
+  border: 1px solid transparent;
+  color: #ffffff;
+}
+
+.subscribe-form .form-control::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffffff;
+  font-size: 14px;
+  opacity: 1; /* Firefox */
+}
+
+.subscribe-form .form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.subscribe-form .form-control::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ffffff;
+  font-size: 14px;
+}
+.subscribe-form .form-control:focus {
+  outline: none !important;
+  border:1px solid transparent;
+  box-shadow: 0 0 10px transparent;
+}
