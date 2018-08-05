@@ -19,7 +19,6 @@
             </div>
           </div>
         </div>
-
         <div class="form-group">
           <div class="row">
             <div class="col-sm-4 offset-sm-2">
@@ -33,14 +32,12 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-4 offset-sm-2">
-              <select class="" name="">
-              @foreach(Khsing\World\World::Countries() as $country)
-                <option value="{{ $country->code }}">{{ $country->emoji }} {{ $country->name }}</option>
-              @endforeach
-            </select>
-              {!! Form::text('requests_country', old('requests_country'), array('class'=>'form-control', 'placeholder' => 'Country')) !!}
+              <select class="" name="requests_country" id="country">
+                @foreach(Countries::all()->sortBy('name')->pluck('name.common') as $country)
+                <option value="{{ $country }}">{{ $country }}</option>
+                @endforeach
+              </select>
             </div>
-            <p class="test2">test2</p>
           </div>
         </div>
         <div class="form-group">
@@ -60,24 +57,27 @@
         <div class="form-group">
           <div class="row">
             <div class="col-sm-3 offset-sm-2">
-              {!! Form::text('requests_city', old('requests_city'), array('class'=>'form-control', 'placeholder' => 'City')) !!}
+              <div class="form-group">
+                <select name="requests_province" id="state" class="form-control" style="width:350px"></select>
+              </div>
             </div>
             <div class="col-sm-3">
-              {!! Form::text('requests_province', old('requests_province'), array('class'=>'form-control', 'placeholder' => 'Province / State')) !!}
+              <div class="form-group">
+                <select name="requests_city" id="city" class="form-control" style="width:350px"></select>
+              </div>
             </div>
             <div class="col-sm-2">
               {!! Form::text('requests_postal', old('requests_postal'), array('class'=>'form-control', 'placeholder' => 'Postal / ZIP')) !!}
             </div>
           </div>
         </div>
-        {{--<div class="form-group">
+        <div class="form-group">
           <div class="row">
             <div class="col-sm-4 offset-sm-2">
-              {!! Form::select('product_id', $product, old('product_id'), array('class'=>'form-control', 'placeholder' => 'Choose your model')) !!}
+              <select name="products" id="products" class="form-control" style="width:350px"></select>
             </div>
           </div>
         </div>
-        --}}
         <div class="form-group">
           <div class="row">
             {!! Form::label('requests_comment', 'Additional comments to help us with your request', array('class'=>'col-sm-5 offset-sm-2 control-label')) !!}
@@ -86,9 +86,9 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
-          <div class="col-sm-10 col-sm-offset-2">
-            {!! Form::submit( 'Submit' , array('class' => 'btn btn-primary')) !!}
+        <div class="form-group text-center">
+          <div class="col-sm-12">
+            {!! Form::submit( 'Submit' , array('class' => 'btn btn-request')) !!}
           </div>
         </div>
         {!! Form::close() !!}

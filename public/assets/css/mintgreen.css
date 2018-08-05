@@ -1,24 +1,54 @@
 /*======================================
 [ CSS Table of contents ]
 01. Header
-02. About
-03. Product
-04. Request
-05. Invest
-06. Team
-07. Footer
+02. Home Page
+03. About
+04. Product
+05. Request
+06. Invest
+07. Team
+08. Footer
 ========================================*/
 body{
   color: #0b424d;
   font-family: 'Open Sans', sans-serif;
 }
+main{
+  overflow: hidden;
+}
 a{
   color: #00bf80;
 }
-{
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
   font-family: 'Lato', sans-serif;
+}
+textarea:focus,
+select:focus,
+input:focus,
+button:focus{
+  outline-color: transparent!important;
+  outline-style: none!important;
+  box-shadow: none!important;
+}
+h3{
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+h1.head-lead{
+  position: absolute;
+  top: 9vw;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 9vw;
+  width: 100%;
+  color: #fff;
+}
+/*==============================================================*/
+.some-class-243{
   font-family: 'Roboto', sans-serif;
 }
+/*==============================================================*/
 .text-left{
   text-align: left;
 }
@@ -28,9 +58,51 @@ a{
 .text-center{
   text-align: center;
 }
+.bg-green{
+  background-color: #2cf6a0;
+}
+.ellipse{
+  margin: 0 -50px;
+  border-bottom-left-radius: 70% 20%;
+  border-bottom-right-radius: 70% 20%;
+  border-top-left-radius: 70% 20%;
+  border-top-right-radius: 70% 20%;
+}
+.ellipse-top{
+  margin: 0 -50px;
+  border-top-left-radius: 70% 20%;
+  border-top-right-radius: 70% 20%;
+}
+.ellipse-bottom{
+  margin: 0 -50px;
+  border-bottom-left-radius: 70% 20%;
+  border-bottom-right-radius: 70% 20%;
+}
 /*======================================
 01. Header
 ========================================*/
+.hero-area {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero-area .head-lead{
+  position: absolute;
+}
+.hero-area .btn{
+  position: absolute;
+}
+.hidden-int-image{
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+}
+.header-image{
+  position: absolute;
+  left: 50%;
+  top: 6vw;
+  width: 75vw;
+  transform: translateX(-50%);
+}
 .navbar-brand img{
   width: 166px;
 }
@@ -45,7 +117,8 @@ nav{
   font-weight: bold;
   text-transform: uppercase;
 }
-.navbar .btn{
+.navbar .btn,
+.btn-request{
   min-width: 160px;
   margin-left: 15px;
 }
@@ -57,6 +130,7 @@ nav{
   font-weight: bold;
   text-transform: uppercase;
 }
+.btn-request,
 .navbar .btn-outline-secondary{
   color: #ffffff;
   border: 2px solid #00bf80;
@@ -66,9 +140,62 @@ nav{
   font-weight: bold;
   text-transform: uppercase;
 }
+
 /*======================================
-02. About
+02. Home Page
 ========================================*/
+section.block-1{
+  padding: 75px 0 200px;
+}
+section.block-1 img{
+  width: 20vw;
+  position: absolute;
+  top: -20%;
+  left: 30%;
+}
+section.block-2{
+  padding: 75px 0 250px;
+}
+section.block-2 img{
+  width: 17vw;
+  left: 8vw;
+  position: absolute;
+}
+section.block-3 {
+  padding: 65px 0 100px;
+}
+section.block-3 img{
+  position: absolute;
+  width: 22vw;
+  top: -12vw;
+}
+section.block-4{
+  padding: 150px 0;
+}
+section.block-4 img{
+  position: absolute;
+  width: 35vw;
+  left: 0;
+}
+section.block-5{
+  padding: 200px 0;
+}
+section.block-5 img{
+  position: absolute;
+  top: -5vw;
+}
+/*======================================
+03. About
+========================================*/
+.about-slogan{
+  background-image: url(../img/about-slogan.png);
+  min-height: 75px;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+.about-body{
+  padding: 100px 0;
+}
 .about-feature-item{
   border-radius: 50%;
   box-shadow: 0 9px 62px 0 rgba(36, 36, 36, 0.17);
@@ -89,7 +216,7 @@ nav{
 }
 
 /*======================================
-03. Product
+04. Product
 ========================================*/
 .swiper-wrapper{
   width: 60%;
@@ -125,7 +252,7 @@ nav{
   opacity: 1;
 }
 /*======================================
-04. Request
+05. Request
 ========================================*/
 .modal{
   z-index: 1020;
@@ -164,7 +291,7 @@ nav{
 .modal .close span{
   color: #fff;
 }
-.request-form input{
+.request-form input:not([type="submit"]){
   border: unset;
   border-bottom: 1px solid #6b6b6b;
   border-radius: 0;
@@ -175,20 +302,76 @@ nav{
   border-radius: 10px;
 }
 /*======================================
-05. Invest
+06. Invest
 ========================================*/
-
-
+.invest-body{
+  padding: 50px 0 30px;
+}
+.invest-contacts{
+  padding: 50px 0 200px;
+}
+.invest-contacts a{
+  font-size: 18px;
+  color:#0b4258;
+  border-bottom: 2px solid #00bf80;
+  padding-bottom: 7px;
+  vertical-align:middle;
+}
+.invest-contacts a:hover{
+  text-decoration: none;
+}
+.invest-contacts p{
+  padding: 0 25px;
+}
+.invest-contacts svg{
+  color: #009966;
+  font-size: 48px;
+  vertical-align:middle;
+  padding-right: 15px;
+}
+.email-holder{
+  max-height: 45px;
+  border-right: 2px solid #009966;
+}
 /*======================================
-06. Team
+07. Team
 ========================================*/
+h1.team-head-lead{
+  top: 0;
+}
+a.linkedin-link{
+  color: #0b424d;
+}
+.team-item{
+  padding: 25px 0;
+}
 .team-item img{
   width: 120px;
   border-radius: 50%;
+  float: left;
 }
-
+.team-item h4{
+  font-weight: bold;
+}
+.team-item-description{
+  float: left;
+  padding: 20px 20px 0;
+}
+.team-item-description svg{
+  font-size: 22px;
+}
+.team-category.first{
+  margin-top: -115px;
+  position: relative;
+}
+.team-category{
+  padding:80px 0;
+}
+.team-category-header {
+  padding-bottom: 50px;
+}
 /*======================================
-07. Footer
+08. Footer
 ========================================*/
 footer{
   color: #ffffff;

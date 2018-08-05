@@ -7,6 +7,7 @@ use App\Http\Requests\CreateRequestsRequest;
 use App\Http\Requests\CreateSubscribersRequest;
 use App\User;
 use App\Requests;
+use App\Product;
 use App\Subscribers;
 use Newsletter;
 
@@ -56,6 +57,11 @@ class RequestsController extends Controller
 
     Subscribers::create($request->all());
     return redirect('/thank-you');
+  }
+  public function getProductList()
+  {
+    $products = Product::get()->pluck('product_title', 'id');
+    return response()->json($products);
   }
 
   public function alarmerbotsend($chat_id, $message)

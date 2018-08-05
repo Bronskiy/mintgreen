@@ -161,7 +161,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
-        Khsing\World\WorldServiceProvider::class,
 
     ],
 
