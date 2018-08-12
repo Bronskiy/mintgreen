@@ -18,6 +18,8 @@ class CreateProductTable extends Migration {
             $table->increments("id");
             $table->string("product_title");
             $table->string("product_url");
+            $table->string("product_image")->nullable();
+            $table->string("product_circle_image")->nullable();
             $table->text("product_specs")->nullable();
             $table->timestamps();
             $table->softDeletes();

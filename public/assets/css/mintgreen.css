@@ -218,6 +218,29 @@ section.block-5 img{
 /*======================================
 04. Product
 ========================================*/
+.circle-image{
+  position: absolute;
+  top: 7vw;
+  right: 50%;
+  width: 30vw;
+}
+.product-specs{
+}
+.product-specs h3{
+  color: #ffffff;
+  text-align: center;
+}
+.product-specs table{
+  margin: 0 auto;
+}
+.product-specs table tr td{
+  padding: 3px 25px;
+  width: 50%;
+}
+.product-specs table tr td:nth-of-type(2n+1){
+  color: #ffffff;
+  text-align: right;
+}
 .swiper-wrapper{
   width: 60%;
   box-shadow: 0 9px 62px 0 rgba(36, 36, 36, 0.37);

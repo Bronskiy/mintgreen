@@ -5,10 +5,13 @@
   <td>
     {!! Form::file('productblocks['.$index.'][product_block_image]') !!}
     {{--
-    {!! Form::hidden('product_block_image', old('productblocks['.$index.'][product_block_image]'), isset($field) ? $field->product_block_image: '') !!}
+    {!! Form::file('productblocks['.$index.'][product_block_image]') !!}
+    {!! Form::file('product_image') !!}
+    {!! Form::text('product_title', old('product_title'), array('class'=>'form-control', 'id'=>'title')) !!}
+    {!! Form::file('productblocks['.$index.'][product_block_image]', old('productblocks['.$index.'][product_block_image]'), ['class' => '']) !!}
     --}}
-    {!! Form::hidden('product_block_image_w', 4096) !!}
-    {!! Form::hidden('product_block_image_h', 4096) !!}
+    {!! Form::hidden('productblocks['.$index.'][product_block_image_w]', 4096) !!}
+    {!! Form::hidden('productblocks['.$index.'][product_block_image_h]', 4096) !!}
   </td>
   <td>
     <a href="#" class="remove btn btn-xs btn-danger">Delete</a>

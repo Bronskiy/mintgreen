@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Product;
+use App\ProductBlocks;
 
 class ProductsController extends Controller
 {
@@ -15,7 +16,7 @@ class ProductsController extends Controller
 
   public function getProductCaddy()
   {
-    $data['ProductData'] = Product::first();
+    $data['ProductData'] = Product::with('productblocks')->first();
     return view('pages.productDetail',$data);
   }
 }

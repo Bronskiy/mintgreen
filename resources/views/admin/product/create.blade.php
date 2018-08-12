@@ -30,7 +30,26 @@
     {!! Form::text('product_url', old('product_url'), array('class'=>'form-control', 'id'=>'slug')) !!}
 
   </div>
-</div><div class="form-group">
+</div>
+<div class="form-group">
+    {!! Form::label('product_image', 'Background Image', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::file('product_image') !!}
+        {!! Form::hidden('product_image_w', 4096) !!}
+        {!! Form::hidden('product_image_h', 4096) !!}
+
+    </div>
+</div>
+<div class="form-group">
+    {!! Form::label('product_circle_image', 'Circle Image', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::file('product_circle_image') !!}
+        {!! Form::hidden('product_circle_image_w', 4096) !!}
+        {!! Form::hidden('product_circle_image_h', 4096) !!}
+
+    </div>
+</div>
+<div class="form-group">
   {!! Form::label('product_specs', 'Specs', array('class'=>'col-sm-2 control-label')) !!}
   <div class="col-sm-10">
     {!! Form::textarea('product_specs', old('product_specs'), array('class'=>'form-control ckeditor')) !!}
