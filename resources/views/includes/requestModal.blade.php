@@ -29,10 +29,14 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group pt45">
           <div class="row">
             <div class="col-sm-4 offset-sm-2">
-              <select class="" name="requests_country" id="country">
+              <select class="country-select" name="requests_country" id="country">
+                <option selected="true" disabled="disabled">Country</option>
+                <option value="Canada">Canada</option>
+                <option value="United States">United States</option>
+                <option disabled="disabled">-- --</option>
                 @foreach(Countries::all()->sortBy('name')->pluck('name.common') as $country)
                 <option value="{{ $country }}">{{ $country }}</option>
                 @endforeach
@@ -71,14 +75,14 @@
             </div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group pt45">
           <div class="row">
             <div class="col-sm-4 offset-sm-2">
-              <select name="products" id="products" class="form-control" style="width:350px"></select>
+              <select name="products" id="products" class="product-select form-control" style="width:350px"></select>
             </div>
           </div>
         </div>
-        <div class="form-group">
+        <div class="form-group pt45">
           <div class="row">
             {!! Form::label('requests_comment', 'Additional comments to help us with your request', array('class'=>'col-sm-5 offset-sm-2 control-label')) !!}
             <div class="col-sm-5 offset-sm-2">

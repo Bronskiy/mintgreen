@@ -14,7 +14,8 @@
         "pragmarx/countries-laravel": "^0.5.2",
         "spatie/laravel-medialibrary": "^6.0.0",
         "spatie/laravel-newsletter": "^4.2",
-        "unisharp/laravel-filemanager": "~1.8"
+        "unisharp/laravel-filemanager": "~1.8",
+        "folklore/image": "0.3.*"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

@@ -161,6 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laraveldaily\Quickadmin\QuickadminServiceProvider::class,
         Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
+        Folklore\Image\ImageServiceProvider::class,
 
     ],
 
@@ -211,7 +212,8 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
-
+        'Image' => Folklore\Image\Facades\Image::class,
+        'InterventionImage' => Intervention\Image\Facades\Image::class,
     ],
 
 ];

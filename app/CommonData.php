@@ -20,8 +20,9 @@ class CommonData extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'commondata';
-    
+
     protected $fillable = [
+          'common_logo',
           'common_email',
           'common_phone',
           'common_address',
@@ -30,7 +31,7 @@ class CommonData extends Model {
           'common_facebook',
           'common_instagram'
     ];
-    
+
 
     public static function boot()
     {
@@ -38,8 +39,8 @@ class CommonData extends Model {
 
         CommonData::observe(new UserActionsObserver);
     }
-    
-    
-    
-    
+
+
+
+
 }

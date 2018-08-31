@@ -19,7 +19,11 @@ class CreateTeamMembersTable extends Migration {
             $table->string("team_member_name");
             $table->string("team_member_position")->nullable();
             $table->string("team_member_linkedin")->nullable();
+            $table->string("team_member_email")->nullable();
+            $table->string("team_member_quote")->nullable();
+            $table->string("team_member_hobby")->nullable();
             $table->string("team_member_photo")->nullable();
+            $table->text("team_member_description")->nullable();
             $table->integer("teamcategory_id")->references("id")->on("teamcategory");
             $table->timestamps();
             $table->softDeletes();

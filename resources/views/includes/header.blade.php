@@ -1,9 +1,12 @@
 <nav class="navbar fixed-top navbar-expand-lg fixed-top">
   <div class="container">
-    <a class="navbar-brand" href="/"><img src="/assets/img/logo.svg" alt="logo"></a>
+    @foreach ($сommonData as $value)
+    <a class="navbar-brand" href="/"><img src="{{ asset('uploads') . '/'.  $value->common_logo }}" alt="logo"></a>
+    @endforeach
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <span class="mobile-hr"></span>
     <div class="collapse navbar-collapse justify-content-md-center" id="navbarResponsive">
       @if ( ! $mainMenu->isEmpty() )
       <ul class="navbar-nav">
@@ -13,8 +16,11 @@
       </ul>
       @endif
     </div>
-    <a class="btn btn-outline-primary" data-toggle="modal" data-target="#myRequest" href="#">Request a quote</a>
-    <a class="btn btn-outline-secondary" href="/invest">Invest</a>
+    <span class="mobile-hr"></span>
+    <div class="header-buttons">
+      <a class="btn btn-outline-primary" data-toggle="modal" data-target="#myRequest" href="#">Request a quote</a>
+      <a class="btn btn-outline-secondary" href="/invest">Invest</a>
+    </div>
   </div>
 </nav>
 <header>

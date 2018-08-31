@@ -3,10 +3,12 @@
     @foreach ($сommonData as $value)
     <div class="row">
       <div class="col-md-8">
-        <h4>Get in touch. Start Minting Green.</h4>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:{{ $value->common_email }}">{{ $value->common_email }}</a></p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+{{ preg_replace('/\D+/', '', $value->common_phone) }}">{{ $value->common_phone }}</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> {!! $value->common_address !!}</p>
+        <h4>Get in touch.<span class="mobile-divider"></span> Start Minting Green.</h4>
+        <div class="footer-contacts">
+          <p><i class="fas fa-envelope"></i> <a href="mailto:{{ $value->common_email }}">{{ $value->common_email }}</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+{{ preg_replace('/\D+/', '', $value->common_phone) }}">{{ $value->common_phone }}</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> {!! $value->common_address !!}</p>
+        </div>
       </div>
       <div class="col-md-4 text-right">
         <ul class="list-inline social-bottom">
@@ -38,7 +40,7 @@
         </ul>
         @endif
       </div>
-      <div class="col-md-6 text-right copyright">
+      <div class="col-md-6 copyright">
         <p class="m-0 text-white">&#9400; <?php echo date("Y"); ?> Mintgreen Blockchain Innovation Corp.</p>
       </div>
     </div>

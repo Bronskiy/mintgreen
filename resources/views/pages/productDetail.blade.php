@@ -18,19 +18,21 @@
   <div class="container">
     <div class="row">
       @if(($loop->iteration) % 2 != 0)
-      <div class="col-lg-6">
+      <div class="col-lg-6 col-md-6">
         <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
       </div>
       @endif
-      <div class="col-lg-6">
-        <h3>{{ $block->product_block_title }}</h3>
-        {!! $block->product_block_text !!}
-      </div>
-        @if(($loop->iteration) % 2 == 0)
-        <div class="col-lg-6">
-          <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
+      <div class="col-lg-6 col-md-6">
+        <div class="product-description">
+          <h3>{{ $block->product_block_title }}</h3>
+          {!! $block->product_block_text !!}
         </div>
-        @endif
+      </div>
+      @if(($loop->iteration) % 2 == 0)
+      <div class="col-lg-6 col-md-6">
+        <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
+      </div>
+      @endif
     </div>
   </div>
 </section>
@@ -45,25 +47,36 @@
   </div>
 </section>
 
-<div class="album py-5">
-  <div class="swiper-container gallery-top">
-    <div class="swiper-wrapper">
-      @foreach($ProductData->getMedia('product_gallery') as $media)
-      <div class="swiper-slide">
-        <img src="{{ $media->getUrl() }}" alt="">
+<section class="caddy-gallery">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <h3>Gallery</h3>
       </div>
-      @endforeach
     </div>
-    <!-- Add Arrows -->
-    <div class="swiper-button-next swiper-button-white"></div>
-    <div class="swiper-button-prev swiper-button-white"></div>
-  </div>
-  <div class="swiper-container gallery-thumbs">
-    <div class="swiper-wrapper">
-      @foreach($ProductData->getMedia('product_gallery') as $media)
-      <div class="swiper-slide" style="background-image:url({{ $media->getUrl() }})"></div>
-      @endforeach
+    <div class="row">
+      <div class="gallery-container">
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper">
+            @foreach($ProductData->getMedia('product_gallery') as $media)
+            <div class="swiper-slide">
+              <img src="{{ $media->getUrl() }}" alt="">
+            </div>
+            @endforeach
+          </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next swiper-button-black"></div>
+        <div class="swiper-button-prev swiper-button-black"></div>
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper">
+            @foreach($ProductData->getMedia('product_gallery') as $media)
+            <div class="swiper-slide" style="background-image:url({{ $media->getUrl() }})"></div>
+            @endforeach
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 @stop

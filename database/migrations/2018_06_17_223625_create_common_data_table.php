@@ -16,6 +16,7 @@ class CreateCommonDataTable extends Migration {
         Model::unguard();
         Schema::create('commondata',function(Blueprint $table){
             $table->increments("id");
+            $table->string("common_logo")->nullable();
             $table->string("common_email")->nullable();
             $table->string("common_phone")->nullable();
             $table->string("common_address")->nullable();

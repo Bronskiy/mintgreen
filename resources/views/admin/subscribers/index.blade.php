@@ -2,7 +2,6 @@
 
 @section('content')
 
-<p>{!! link_to_route(config('quickadmin.route').'.subscribers.create', trans('quickadmin::templates.templates-view_index-add_new') , null, array('class' => 'btn btn-success')) !!}</p>
 
 @if ($subscribers->count())
     <div class="portlet box green">

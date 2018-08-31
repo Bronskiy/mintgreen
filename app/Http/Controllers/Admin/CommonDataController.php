@@ -9,6 +9,7 @@ use App\CommonData;
 use App\Http\Requests\CreateCommonDataRequest;
 use App\Http\Requests\UpdateCommonDataRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Traits\FileUploadTrait;
 
 
 
@@ -35,8 +36,8 @@ class CommonDataController extends Controller {
 	 */
 	public function create()
 	{
-	    
-	    
+
+
 	    return view('admin.commondata.create');
 	}
 
@@ -47,7 +48,8 @@ class CommonDataController extends Controller {
 	 */
 	public function store(CreateCommonDataRequest $request)
 	{
-	    
+
+		$request = $this->saveFiles($request);
 		CommonData::create($request->all());
 
 		return redirect()->route(config('quickadmin.route').'.commondata.index');
@@ -62,8 +64,8 @@ class CommonDataController extends Controller {
 	public function edit($id)
 	{
 		$commondata = CommonData::find($id);
-	    
-	    
+
+
 		return view('admin.commondata.edit', compact('commondata'));
 	}
 
@@ -76,7 +78,7 @@ class CommonDataController extends Controller {
 	public function update($id, UpdateCommonDataRequest $request)
 	{
 		$commondata = CommonData::findOrFail($id);
-
+		$request = $this->saveFiles($request);
         
 
 		$commondata->update($request->all());

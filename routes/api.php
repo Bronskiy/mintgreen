@@ -21,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('/get-state-list','AddressController@getStateList');
 Route::get('/get-city-list','AddressController@getCityList');
 Route::get('/get-product-list','RequestsController@getProductList');
+
+Route::get('/get-team-member/{id?}', [
+			'uses' => 'TeamController@getTeamMemberData'
+		]);

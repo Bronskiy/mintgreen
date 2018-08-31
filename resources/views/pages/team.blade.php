@@ -24,18 +24,18 @@
     <div class="row">
       @endif
       <div class="col-md-6 team-item">
-
-        @if($value->team_member_photo)
-        <img src="{{ asset('uploads') . '/'.  $value->team_member_photo }}" alt="{{ $value->team_member_name }}">
-        @else
-        <img src="http://via.placeholder.com/240?text=user" alt="{{ $value->team_member_name }}">
-        @endif
-        <div class="team-item-description">
-          <h4>{{ $value->team_member_name }}</h4>
-          <h5>{{ $value->team_member_position }}</h5>
-          <p><a href="{{ $value->team_member_linkedin }}" class="linkedin-link"><i class="fab fa-linkedin"></i></a></p>
+        <div class="team-item-container" data-id="{{ $value->id }}">
+          @if($value->team_member_photo)
+          <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_member_photo,240,240,array('crop')) }}" alt="{{ $value->team_member_name }}">
+          @else
+          <img src="http://via.placeholder.com/240?text=user" alt="{{ $value->team_member_name }}">
+          @endif
+          <div class="team-item-description">
+            <h4>{{ $value->team_member_name }}</h4>
+            <h5>{{ $value->team_member_position }}</h5>
+            <p><a href="{{ $value->team_member_linkedin }}" class="linkedin-link"><i class="fab fa-linkedin"></i></a></p>
+          </div>
         </div>
-
       </div>
       @if($loop->last)
     </div>

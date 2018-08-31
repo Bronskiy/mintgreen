@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Home;
 use App\About;
 use App\Invest;
+use App\ThankYou;
 use App\ Specialization;
 
 class OnePageController extends Controller
@@ -25,7 +26,8 @@ class OnePageController extends Controller
 
   public function getThankYou()
   {
-    return view('pages.thankYou');
+    $data['ThankYou'] = ThankYou::all();
+    return view('pages.thankYou',$data);
   }
 
   public function getInvest()

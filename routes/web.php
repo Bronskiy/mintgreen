@@ -14,6 +14,7 @@
 View::share('сommonData', App\CommonData::get());
 View::share('mainMenu', App\MainMenu::get());
 View::share('footerMenu', App\FooterMenu::get());
+View::share('customCSS', App\CustomCSS::get());
 
 Route::get('/', 'OnePageController@getHome');
 Route::get('/about', 'OnePageController@getAbout');

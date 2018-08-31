@@ -21,4 +21,15 @@ class TeamController extends Controller
     }
     return view('pages.team',$data);
   }
+  public function getTeamMemberData(Request $request, $member_id = "default")
+  {
+    if ($member_id == "default") {
+      return response()->json();
+    } else {
+      $member = TeamMembers::where('id', $member_id)->first();
+      return response()->json($member);
+    }
+  }
+
+
 }

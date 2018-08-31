@@ -28,20 +28,29 @@
   </div>
 </section>
 @endforeach
-<div class="album py-5 bg-light ellipse-top">
+<section class="about-specialization bg-light ellipse-top">
   <div class="container">
+    <div class="row text-center">
+      <div class="col-lg-12">
+        <h3>MintGreen Specializes in:</h3>
+      </div>
+    </div>
     <div class="row">
       @foreach ($SpecializationData as $value)
-      <div class="col-md-4 about-feature-item text-center">
-        <img src="{{ asset('uploads') . '/'.  $value->specialization_icon }}" alt="{{ $value->specialization_title }}">
-        <h4>{{ $value->specialization_title }}</h4>
-        <div class="hover-open">
-          <p>{{ $value->specialization_description }}</p>
+      <div class="col-md-4 about-feature-item-wrapper text-center">
+        <div class="about-feature-item">
+          <div class="about-feature-item-content">
+            <img src="{{ asset('uploads') . '/'.  $value->specialization_icon }}" alt="{{ $value->specialization_title }}">
+            <h4>{{ $value->specialization_title }}</h4>
+          </div>
+          <div class="hover-open">
+            <p>{{ $value->specialization_description }}</p>
+          </div>
         </div>
       </div>
       @endforeach
     </div>
   </div>
-</div>
+</section>
 
 @stop

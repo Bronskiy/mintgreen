@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\CreateRequestsRequest;
 use App\Http\Requests\CreateSubscribersRequest;
+use App\Notifications\NewMessage;
 use App\User;
 use App\Requests;
 use App\Product;

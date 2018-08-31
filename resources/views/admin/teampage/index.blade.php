@@ -12,7 +12,6 @@
     <table class="table table-striped table-hover table-responsive datatable" id="datatable">
       <thead>
         <tr>
-
           <th>Team Page Title</th>
           <th>Team Page Header Image</th>
 
@@ -23,7 +22,6 @@
       <tbody>
         @foreach ($teampage as $row)
         <tr>
-
           <td>{{ $row->team_page_title }}</td>
           <td>@if($row->team_page_header_image != '')<img src="{{ asset('uploads/thumb') . '/'.  $row->team_page_header_image }}">@endif</td>
 

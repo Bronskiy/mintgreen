@@ -10,14 +10,20 @@
 @hasSection('meta_description')
 <meta name="description" content="@yield('meta_description')">
 @endif
-<link href="https://fonts.googleapis.com/css?family=Lato:300,700|Open+Sans:400,700|Roboto:300,700,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300,400,700|Roboto:300,700,900" rel="stylesheet">
 <link href="/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <script type="text/javascript" src="/assets/vendor/fontawesome/js/fontawesome-all.min.js"></script>
 <link href="/assets/css/normalize.css" rel="stylesheet">
 @if(Request::is('product'))
 <link href="/assets/vendor/swiper/css/swiper.min.css" rel="stylesheet">
 @endif
+<link href="/assets/js/plugins/chosen/chosen.min.css" rel="stylesheet">
 <link href="/assets/css/mintgreen.css" rel="stylesheet">
+@foreach ($customCSS as $value)
+<style>
+  {!! $value->custom_css_code !!}
+</style>
+@endforeach
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
