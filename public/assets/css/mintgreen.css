@@ -7,13 +7,19 @@
 05. Request
 06. Invest
 07. Team
-08. Thank You
-09. Footer
-10. Responsive
+08. 404
+09. Thank You
+10. Footer
+11. Responsive
 ========================================*/
+html {
+  position: relative;
+  min-height: 100%;
+}
 body{
   color: #0b424d;
   font-family: 'Open Sans', sans-serif;
+  margin-bottom: 320px;
 }
 main{
   overflow: hidden;
@@ -109,17 +115,18 @@ h1.head-lead{
 }
 .home-page .hero-area .head-lead{
   color: #fff;
-  bottom: 12vw;
+  bottom: 10vw;
   left: 33vw;
   text-align: left;
 }
 .hero-area .btn{
   position: absolute;
 }
+.product-12 .hero-area .btn,
 .home-page .hero-area .btn{
-  bottom: 9vw;
+  bottom: 7vw;
   left: 33vw;
-  color: #00bf80;
+  color: #000000;
   border: 2px solid #fff;
   background-color: #fff;
   border-radius: 19px;
@@ -128,10 +135,21 @@ h1.head-lead{
   text-transform: uppercase;
   padding: 5px 25px;
 }
+.product-12 .hero-area .btn{
+  bottom: 13vw;
+  left: 32vw;
+  padding: 5px 2vw;
+}
+.product-12 .hero-area .btn:hover,
+.home-page .hero-area .btn:hover{
+  background-color: #66ffcc;
+  border-color: #66ffcc;
+}
 .hidden-int-image{
   visibility: hidden;
   opacity: 0;
   width: 100%;
+  max-height: 641px;
 }
 .header-image{
   position: absolute;
@@ -154,6 +172,16 @@ nav{
   font-weight: bold;
   text-transform: uppercase;
 }
+.navbar-nav .nav-link:hover{
+  -moz-transform: translateY(1px);
+  -o-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+  transform: translateY(1px);
+  transition: .3s;
+  /* text-shadow: 0 2px 3px rgba(7,11,33,.4); */
+  color: #66ffcc!important;
+}
 .navbar .btn,
 .btn-request{
   min-width: 160px;
@@ -169,6 +197,7 @@ nav{
 }
 
 .btn-request,
+.page-404-body .btn-outline-secondary,
 .navbar .btn-outline-secondary{
   color: #ffffff;
   border: 2px solid #00bf80;
@@ -179,13 +208,22 @@ nav{
   text-transform: uppercase;
 }
 .btn-request:hover,
-.navbar .btn-outline-secondary:hover,
 .navbar .btn-outline-primary:hover{
   background-color: #ffffff;
-  color: #00bf80;
+  color: #66ffcc;
   border: 2px solid #66ffcc;
 }
-
+.navbar .btn-outline-secondary:active,
+.navbar .btn-outline-primary:active{
+  background-color: #66ffcc!important;
+  border-color: #66ffcc!important;
+}
+.page-404-body .btn-outline-secondary:hover,
+.navbar .btn-outline-secondary:hover{
+  background-color: #66ffcc;
+  color: #ffffff;
+  border: 2px solid #66ffcc;
+}
 /*======================================
 02. Home Page
 ========================================*/
@@ -198,29 +236,45 @@ section.block-1 img{
   top: -20%;
   left: 30%;
 }
+section.block-1 .home-text-block-1{
+  padding: 0 80px 0 15px;
+}
 section.block-2{
-  padding: 75px 0 250px;
+  padding: 75px 0 150px;
 }
 section.block-2 img{
-  width: 17vw;
+  width: 20vw;
   left: 8vw;
+  max-width: 340px;
   position: absolute;
+}
+section.block-2 .home-text-block-2{
+  padding: 90px 15px 0 80px;
 }
 section.block-3 {
   padding: 65px 0 100px;
 }
 section.block-3 img{
   position: absolute;
-  width: 22vw;
+  width: 26vw;
   top: -12vw;
+  right: 0vw;
+  max-width: 400px;
+}
+section.block-3 .home-text-block-3{
+  padding: 0 80px 0 15px;
 }
 section.block-4{
   padding: 150px 0;
 }
 section.block-4 img{
   position: absolute;
-  width: 35vw;
+  width: 39vw;
   left: 0;
+  max-width: 620px;
+}
+section.block-4 .home-text-block-4{
+  padding: 0 15px 0 80px;
 }
 section.block-5{
   padding: 200px 0;
@@ -228,6 +282,9 @@ section.block-5{
 section.block-5 img{
   position: absolute;
   top: -5vw;
+}
+section.block-5 .home-text-block-5{
+  padding: 0 80px 0 15px;
 }
 /*======================================
 03. About
@@ -238,9 +295,16 @@ section.block-5 img{
   background-repeat: no-repeat;
   padding: 80px 0 30px;
   margin: 50px 0 0;
+  max-width: 1400px;
 }
 .about-body{
   padding: 100px 0 70px;
+}
+#about-whale{
+  margin: 50px auto;
+  width: 100%;
+  display: block;
+  max-width: 544px;
 }
 .about-specialization{
   padding: 70px 0 150px;
@@ -254,8 +318,9 @@ section.block-5 img{
   height: 250px;
   width: 250px;
   margin: 50px auto;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  transition: all .1s ease-in-out;
+  -moz-transition: all .1s ease-in-out;
+  -webkit-transition: all .1s ease-in-out;
 }
 .about-feature-item-content{
   position: relative;
@@ -273,14 +338,14 @@ section.block-5 img{
   font-family: 'Open Sans', sans-serif;
 }
 .hover-open{
-  position: absolute;
-  bottom: 8%;
+  position: relative;
+  bottom: unset;
+  top: 25px;
   left: 50%;
-  width: 63%;
+  width: 76%;
   transform: translate(-50%,-0%);
   opacity: 0;
-}
-.hover-open{
+  visibility: hidden;
   font-size: 12px;
 }
 .about-feature-item:hover{
@@ -293,18 +358,26 @@ section.block-5 img{
 }
 .about-feature-item:hover .hover-open{
   opacity: 1;
-  transition: all .5s ease-in-out;
-  -moz-transition: all .5s ease-in-out;
-  -webkit-transition: all .5s ease-in-out;
+  visibility: visible;
+  transition: all 1.2s ease-in-out;
+  -moz-transition: all 1.2s ease-in-out;
+  -webkit-transition: all 1.2s ease-in-out;
+  /*
+  transition: visibility 1s, opacity 1s linear;
+  -moz-transition: visibility 1s, opacity 1s linear;
+  -webkit-transition: visibility 1s, opacity 1s linear;
+  */
 }
 .about-feature-item:hover .about-feature-item-content{
-  top: 20%;
+  top: 57px;
   transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
 }
 .about-feature-item:hover img {
-  margin: 5px auto;
+  width: 60px;
+  max-height: 50px;
+  margin: 3px auto;
   transition: all .3s ease-in-out;
   -moz-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
@@ -321,40 +394,58 @@ section.block-5 img{
 .caddy-1{
   padding: 100px 0;
 }
+.caddy-1 img{
+  padding-right: 30px;
+}
+.caddy-1 .product-description{
+  padding-left: 30px;
+}
 .caddy-2{
-  padding: 150px 0 250px;
+  padding: 150px 0 200px;
   overflow: hidden;
 }
 .caddy-2 img{
   position: absolute;
-  width: 70vw;
+  width: 90vw;
   max-width: unset;
-  right: 1vw;
-  top: -10vw;
+  right: -6vw;
+  top: -17vw;
+}
+.caddy-2 .product-description{
+  max-width: 440px;
 }
 .caddy-3{
   padding: 200px 0 150px;
 }
 .caddy-3 img{
-  max-width: 27vw;
+  max-width: 30vw;
   position: absolute;
   top: -7vw;
+}
+.caddy-3 .product-description{
+  max-width: 455px;
 }
 .caddy-4{
   padding: 200px 0;
 }
 .caddy-4 img{
   position: absolute;
-  height: 30vw;
-  top: -5vw;
+  height: 38vw;
+  top: -7vw;
+}
+.caddy-4 .product-description{
+  max-width: 455px;
 }
 .caddy-5{
-  padding: 200px 0;
+  padding: 180px 0;
 }
 .caddy-5 img{
   position: absolute;
-  height: 30vw;
-  top: -3vw;
+  height: 40vw;
+  top: -7vw;
+}
+.caddy-5 .product-description{
+  max-width: 455px;
 }
 .caddy-6{
   padding: 330px 0 250px;
@@ -363,19 +454,23 @@ section.block-5 img{
 }
 .caddy-6 img{
   position: absolute;
-  width: 89vw;
-  right: 0vw;
-  bottom: -17vw;
+  width: 1400px;
+  right: -6vw;
+  bottom: -257px;
   max-width: unset;
 }
 .caddy-6 .product-description{
   position: absolute;
-  left: 58%;
-  width: 69%;
-  bottom: 0;
+  left: 400px;
+  width: 350px;
+  top: -160px;
 }
 .caddy-7{
   padding: 100px 0;
+}
+.caddy-7 .product-description{
+  max-width: 410px;
+  padding-top: 100px;
 }
 .product-specs{
   padding: 80px 0;
@@ -439,8 +534,8 @@ section.block-5 img{
   padding: 10px 0;
 }
 .gallery-thumbs .swiper-slide {
-  width: 25%;
-  min-height: 150px;
+  width: 15%;
+  min-height: 110px;
   height: 100%;
   border-radius: 11px;
   box-shadow: 1px 1px 2px 2px rgba(187, 187, 187, 0.2);
@@ -510,6 +605,8 @@ section.block-5 img{
 }
 .modal .close span{
   color: #fff;
+  font-size: 2rem;
+  font-weight: 100;
 }
 .request-form label{
   color: #6b6b6b;
@@ -552,7 +649,6 @@ select.gfort-chosen-select.error+label.error+.chosen-container .chosen-single,
 .form-group select.gfort-chosen-select.error+label.error+.chosen-container .chosen-single {
   border-color: #ff0000;
 }
-
 .chosen-container {
   border: 0;
   padding: 0;
@@ -727,6 +823,16 @@ h1.team-head-lead{
 a.linkedin-link{
   color: #0b424d;
 }
+.hero-section.team-page{
+  margin-top: 60px;
+}
+.hero-section.team-page .hero-area{
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+}
+.hero-section.team-page .hero-area h1{
+  top: -4vw;
+}
 .team-item{
   padding: 25px 0;
 }
@@ -744,7 +850,7 @@ a.linkedin-link{
   filter: grayscale(0%);
 }
 .team-item img{
-  width: 120px;
+  width: 132px;
   border-radius: 50%;
   float: left;
 }
@@ -759,7 +865,7 @@ a.linkedin-link{
   font-size: 22px;
 }
 .team-category.first{
-  margin-top: -115px;
+  margin-top: -85px;
   position: relative;
 }
 .team-category{
@@ -784,6 +890,7 @@ a.linkedin-link{
 #memberModal .modal-body{
   padding: 0;
   height: 100%;
+  border-right: 7px solid #66ffcc;
 }
 #memberModal .close{
   right: 2%;
@@ -849,17 +956,31 @@ a.linkedin-link{
   color: #0B424D;
 }
 /*======================================
-08. Thank You
+08. 404
+========================================*/
+.page-404-body{
+  margin-top: 160px;
+  padding: 10vw 0;
+  text-align: center;
+}
+/*======================================
+09. Thank You
 ========================================*/
 .thank-you-body{
   padding: 100px 0;
 }
 /*======================================
-09. Footer
+10. Footer
 ========================================*/
 footer{
   color: #ffffff;
   padding: 55px 0 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: 100%;
+  height: 320px;
   background-color: #00bf80;
   -webkit-box-shadow: inset 0px 32px 25px -18px rgba(0,0,0,0.26);
   -moz-box-shadow: inset 0px 32px 25px -18px rgba(0,0,0,0.26);
@@ -870,6 +991,7 @@ footer a{
 }
 footer a:hover{
   text-decoration: none;
+  color: #66ffcc;
 }
 footer hr{
   border-color: #ffffff;
@@ -902,6 +1024,9 @@ footer ul.social-bottom li a{
   display: flex;
   padding: 5px;
   font-size: 19px;
+}
+footer ul.social-bottom li a:hover {
+  border: 2px solid #66ffcc;
 }
 .subscribe-form .input-group{
   border: 1px solid #ffffff;
@@ -945,13 +1070,117 @@ footer ul.social-bottom li a{
   box-shadow: 0 0 10px transparent;
 }
 
-
 /*======================================
-10. Responsive
+11. Responsive
 ========================================*/
+
+.gfort-mobile-device select{
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  border: 1px solid #6b6b6b;
+  width: 100%!important;
+  height: 38px;
+}
+
+@media (min-width: 1600px) {
+  section.block-2 img{
+    left: 30px;
+  }
+  .header-image{
+    top: 185px;
+    max-width: 1000px;
+  }
+  .home-page .hero-area .btn{
+    bottom: 60px;
+    left: 530px;
+  }
+  .hero-area .head-lead{
+    top: 165px;
+    font-size: 150px;
+  }
+  .home-page .hero-area .head-lead{
+    bottom: 100px;
+    left: 530px;
+    font-size: 1rem;
+    top: unset;
+  }
+  .hero-section.team-page .hero-area h1{
+    top: -80px;
+  }
+  .about-slogan h4{
+    font-size: 21px;
+  }
+  .circle-image{
+    max-width: 450px;
+    top: 120px;
+    right: 850px;
+  }
+  .product-12 .hero-area .btn{
+    left: 430px;
+    bottom: 135px;
+    padding: 5px 35px;
+  }
+  section.block-3 img{
+    top: -200px;
+  }
+  section.block-5 img{
+    top: -80px;
+  }
+  .hero-area{
+    margin: 0 auto;
+  }
+  .caddy-2 img{
+    max-width: 1200px;
+    right: -100px;
+    top: -220px;
+  }
+  .caddy-3 img{
+    max-width: 500px;
+    right: 100px;
+    top: -120px;
+  }
+  .caddy-4 img{
+    max-height: 600px;
+    top: -130px;
+  }
+  .caddy-5 img{
+    width: 500px;
+    height: auto;
+    top: -135px;
+  }
+  .caddy-6 img{
+    right: -85px;
+  }
+  #myRequest,
+  #memberModal,
+  .caddy-2,
+  .caddy-4,
+  .caddy-6,
+  .product-specs,
+  .caddy-gallery,
+  .about-slogan,
+  .about-specialization,
+  .hero-section,
+  section.block-2,
+  section.block-4,
+  footer{
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+  .team-category.first{
+    margin: -120px auto 0;
+    max-width: 1600px;
+  }
+  .swiper-button-next.swiper-button-black,
+  .swiper-button-prev.swiper-button-black{
+    top: -250px;
+  }
+}
+
 /*
-  ##Device = Desktops
-  ##Screen = 1281px to higher resolution desktops
+##Device = Desktops
+##Screen = 1281px to higher resolution desktops
 */
 
 @media (min-width: 1281px) {
@@ -959,8 +1188,8 @@ footer ul.social-bottom li a{
 }
 
 /*
-  ##Device = Laptops, Desktops
-  ##Screen = B/w 1025px to 1280px
+##Device = Laptops, Desktops
+##Screen = B/w 1025px to 1280px
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
@@ -970,20 +1199,56 @@ footer ul.social-bottom li a{
   .about-slogan h4{
     font-size: 1.8vw;
   }
+  .caddy-5 {
+    padding: 100px 0;
+  }
+  .caddy-4 {
+    padding: 120px 0;
+  }
+  .caddy-2 {
+    padding: 150px 0 150px;
+  }
+  .team-item-description {
+    max-width: 228px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .caddy-6 img {
+    width: 1000px;
+  }
+  .caddy-6 .product-description{
+    left: 250px;
+    width: 400px;
+    top: -210px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px){
+  .caddy-6 img {
+    width: 800px;
+  }
+  .caddy-6 .product-description {
+    left: 150px;
+    width: 450px;
+    top: -210px;
+  }
 }
 
 /*
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
+##Device = Tablets, Ipads (portrait)
+##Screen = B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
   .team-item-description{
-    max-width: 240px;
+    max-width: 228px;
   }
   .hero-section .hero-area {
     top: 60px;
+  }
+  .hero-section.team-page .hero-area{
+    top: unset;
   }
   .header-image {
     top: 4vw;
@@ -997,26 +1262,51 @@ footer ul.social-bottom li a{
   }
   section.block-2 img{
     width: 27vw;
+    top: -3vw;
   }
   section.block-3 img{
     width: 33vw;
   }
+  section.block-1 .home-text-block-1,
+  section.block-2 .home-text-block-2,
+  section.block-3 .home-text-block-3,
+  section.block-4 .home-text-block-4,
+  section.block-5 .home-text-block-5{
+    padding: 0 15px;
+  }
+
   .about-slogan{
     padding: 5.1vw 0 30px;
   }
   .about-slogan h4{
     font-size: 1.8vw;
   }
+  .caddy-5 {
+    padding: 80px 0;
+  }
+  .caddy-2 {
+    padding: 150px 0 120px;
+  }
+  .caddy-4 {
+    padding: 100px 0;
+  }
+  .caddy-3 {
+    padding: 120px 0 80px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px){
   .swiper-button-prev.swiper-button-black {
-      left: -16%;
+    left: -16%;
+  }
+  .ellipse-top {
+    border-top-left-radius: 90% 10%;
+    border-top-right-radius: 90% 10%;
   }
 }
 /*
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
+##Device = Tablets, Ipads (landscape)
+##Screen = B/w 768px to 1024px
 */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
@@ -1024,13 +1314,26 @@ footer ul.social-bottom li a{
 }
 
 /*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
+##Device = Low Resolution Tablets, Mobiles (Landscape)
+##Screen = B/w 481px to 767px
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  body{
+    margin-bottom: 555px;
+  }
+  footer{
+    height: 555px;
+  }
+  .swiper-button-next.swiper-button-black,
   .swiper-button-prev.swiper-button-black {
-      left: -21%;
+    display: none!important;
+  }
+  .product-12 .hero-area .btn{
+    display: none;
+  }
+  .swiper-button-prev.swiper-button-black {
+    left: -21%;
   }
   .mobile-hr{
     border-bottom: 2px solid rgba(154, 154, 154, 0.1);
@@ -1100,13 +1403,123 @@ footer ul.social-bottom li a{
   section.block-5 .col-lg-6.col-md-6:first-of-type{
     min-height: 260px;
   }
+  section.block-1 .home-text-block-1,
+  section.block-2 .home-text-block-2,
+  section.block-3 .home-text-block-3,
+  section.block-4 .home-text-block-4,
+  section.block-5 .home-text-block-5{
+    padding: 0 15px;
+  }
+  .about-slogan{
+    background-size: cover;
+    background-position-x: 105%;
+    padding: 61px 0 10px;
+  }
+  .about-slogan h4{
+    font-size: 2.7vw;
+    line-height: normal;
+    max-width: 67vw;
+  }
   .hero-area.invest-hero{
     border-bottom-left-radius: 70% 30%;
     border-bottom-right-radius: 70% 30%;
     margin: 0 -35px;
   }
+  .caddy-1 .product-description{
+    padding-left: unset;
+  }
+  .caddy-2 img{
+    width: 700px;
+    bottom: 192px;
+    top: unset;
+  }
+  .caddy-2.ellipse{
+    padding: 350px 50px 30px;
+  }
+  .caddy-2 .product-description{
+    min-height: 202px;
+  }
+  .caddy-3{
+    padding: 330px 0 50px;
+  }
+  .caddy-3 img{
+    width: 68vw;
+    max-width: 300px;
+    bottom: 6vw;
+    top: unset;
+    left: 12%;
+  }
+  .caddy-4.ellipse{
+    padding: 300px 50px 50px;
+  }
+  .caddy-4 .product-description{
+    height: 290px;
+  }
+  .caddy-4 img{
+    max-width: unset;
+    bottom: 300px;
+    top: unset;
+    left: 29%;
+    height: 250px;
+  }
+  .caddy-5{
+    padding: 350px 0 50px;
+  }
+  .caddy-5 img{
+    height: 62vw;
+    max-height: 300px;
+    top: unset;
+    bottom: 3vw;
+    left: 28vw;
+  }
+  .caddy-6.ellipse{
+    padding: 50px 50px 0;
+  }
+  .caddy-6 .product-description{
+    position: unset;
+    width: unset;
+  }
+  .caddy-6 img{
+    position: unset;
+    width: 120vw;
+    max-width: 750px;
+    margin-left: -15vw;
+  }
+  .caddy-7 {
+    padding: 50px 0;
+  }
+  .caddy-7 img{
+    padding: 25px;
+  }
   h1.team-head-lead{
     top: 0;
+  }
+  #memberModal .close{
+    top: 50px;
+    border: none;
+  }
+  #memberModal .close span {
+    color: #ffffff;
+  }
+  #memberModal .modal-content{
+    top: 82px;
+  }
+  #memberModal .modal-body{
+    border-right: none;
+  }
+  #memberModal .modal-left-side {
+    width: 100%;
+    max-height: 750px;
+    display: block;
+    height: 100%;
+    float: unset;
+    border-bottom: 7px solid #6fc;
+  }
+  #memberModal .modal-right-side{
+    width: 100%;
+  }
+  .hero-section.team-page {
+    margin-top: 116px;
   }
   .team-category.first{
     margin-top: -55px;
@@ -1133,6 +1546,10 @@ footer ul.social-bottom li a{
     border-top-left-radius: 90% 10%;
     border-top-right-radius: 90% 10%;
   }
+  .ellipse-top {
+    border-top-left-radius: 95% 5%;
+    border-top-right-radius: 95% 5%;
+  }
   .request-form input:not([type="submit"]) {
     margin-bottom: 1rem;
   }
@@ -1155,14 +1572,28 @@ footer ul.social-bottom li a{
 }
 
 /*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  body{
+    margin-bottom: 610px;
+  }
+  footer{
+    height: 610px;
+  }
+  .product-12 .hero-area .btn{
+    display: none;
+  }
+  .navbar .btn, .btn-request{
+    margin-left: 0.5vw;
+    font-size: 12px;
+    min-width: 135px;
+  }
   .swiper-button-next.swiper-button-black,
   .swiper-button-prev.swiper-button-black {
-      display: none!important;
+    display: none!important;
   }
   .mobile-hr{
     border-bottom: 2px solid rgba(154, 154, 154, 0.1);
@@ -1201,6 +1632,9 @@ footer ul.social-bottom li a{
     border-bottom-right-radius: 70% 30%;
     margin: 0 -35px;
   }
+  .hero-section.team-page {
+    margin-top: 116px;
+  }
   h1.team-head-lead{
     top: 0;
   }
@@ -1209,6 +1643,9 @@ footer ul.social-bottom li a{
   }
   .caddy-1 img{
     padding-bottom: 35px;
+  }
+  .caddy-1 .product-description{
+    padding-left: unset;
   }
   section.block-1 {
     padding: 200px 0 50px;
@@ -1223,7 +1660,7 @@ footer ul.social-bottom li a{
   }
   section.block-3 img{
     width: 52vw;
-    bottom: 90vw;
+    bottom: 420px;
     top: unset;
     left: 22vw;
   }
@@ -1242,10 +1679,27 @@ footer ul.social-bottom li a{
     top: -129vw;
     width: 90%;
   }
+  section.block-1 .home-text-block-1,
+  section.block-2 .home-text-block-2,
+  section.block-3 .home-text-block-3,
+  section.block-4 .home-text-block-4,
+  section.block-5 .home-text-block-5{
+    padding: 0 15px;
+  }
   .block-2.ellipse,
-  .block-4.ellipse,
-  .team-category.ellipse{
+  .block-4.ellipse{
     padding: 60vw 50px 50px;
+  }
+  .team-category.ellipse{
+    padding: 60px 50px;
+  }
+  .about-slogan{
+    background-size: cover;
+    padding: 60px 0 10px;
+  }
+  .about-slogan h4{
+    font-size: 18px;
+    line-height: 24px;
   }
   .circle-image{
     width: 40vw;
@@ -1305,8 +1759,8 @@ footer ul.social-bottom li a{
   }
   .caddy-6 img{
     position: unset;
-    width: 120vw;
-    margin-left: -15vw;
+    width: 127vw;
+    margin-left: -20vw;
   }
   .caddy-7 {
     padding: 50px 0;
@@ -1318,7 +1772,7 @@ footer ul.social-bottom li a{
     padding: 25px;
   }
   .team-item-description{
-    max-width: 230px;
+    max-width: 218px;
   }
   .email-holder{
     margin-bottom: 35px;
@@ -1336,11 +1790,15 @@ footer ul.social-bottom li a{
     border-top-left-radius: 90% 10%;
     border-top-right-radius: 90% 10%;
   }
+  .ellipse-top {
+    border-top-left-radius: 95% 5%;
+    border-top-right-radius: 95% 5%;
+  }
   .request-form input:not([type="submit"]) {
     margin-bottom: 1rem;
   }
   .modal-dialog{
-    margin: 117px 0 0;
+    margin: 114px 0 0;
   }
   .modal-header {
     border-bottom-left-radius: 70% 30%;
@@ -1348,6 +1806,31 @@ footer ul.social-bottom li a{
   }
   .modal .close{
     right: 5%;
+    top: 25px;
+  }
+  #memberModal .close{
+    top: 50px;
+    border: none;
+  }
+  #memberModal .close span {
+    color: #ffffff;
+  }
+  #memberModal .modal-content{
+    top: 82px;
+  }
+  #memberModal .modal-body{
+    border-right: none;
+  }
+  #memberModal .modal-left-side {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    height: 100%;
+    float: unset;
+    border-bottom: 7px solid #6fc;
+  }
+  #memberModal .modal-right-side{
+    width: 100%;
   }
   .mobile-divider{
     display: block;
@@ -1360,5 +1843,36 @@ footer ul.social-bottom li a{
   footer h4,
   footer .copyright {
     text-align: center;
+  }
+}
+@media (max-width: 400px){
+  body{
+    margin-bottom: 610px;
+  }
+  footer{
+    height: 610px;
+  }
+  .caddy-1 .product-description{
+    padding-left: unset;
+  }
+  section.block-5 img {
+    top: -586px;
+  }
+  .team-item-description {
+    max-width: 176px;
+    padding: 10px 10px 0;
+  }
+  section.block-1 .home-text-block-1,
+  section.block-2 .home-text-block-2,
+  section.block-3 .home-text-block-3,
+  section.block-4 .home-text-block-4,
+  section.block-5 .home-text-block-5{
+    padding: 0 15px;
+  }
+  #memberModal .modal-body{
+    border-right: none;
+  }
+  #memberModal .modal-left-side {
+    border-bottom: 7px solid #6fc;
   }
 }

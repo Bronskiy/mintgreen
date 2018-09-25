@@ -20,12 +20,15 @@ class TeamPage extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'teampage';
-    
+
     protected $fillable = [
           'team_page_title',
-          'team_page_header_image'
+          'team_page_header_image',
+          'seo_title',
+          'seo_keywords',
+          'seo_description'
     ];
-    
+
 
     public static function boot()
     {
@@ -33,8 +36,8 @@ class TeamPage extends Model {
 
         TeamPage::observe(new UserActionsObserver);
     }
-    
-    
-    
-    
+
+
+
+
 }

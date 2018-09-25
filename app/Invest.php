@@ -20,13 +20,16 @@ class Invest extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'invest';
-    
+
     protected $fillable = [
           'invest_title',
           'invest_header_image',
-          'invest_body'
+          'invest_body',
+          'seo_title',
+          'seo_keywords',
+          'seo_description'
     ];
-    
+
 
     public static function boot()
     {
@@ -34,8 +37,8 @@ class Invest extends Model {
 
         Invest::observe(new UserActionsObserver);
     }
-    
-    
-    
-    
+
+
+
+
 }

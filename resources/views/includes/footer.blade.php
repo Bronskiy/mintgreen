@@ -7,7 +7,7 @@
         <div class="footer-contacts">
           <p><i class="fas fa-envelope"></i> <a href="mailto:{{ $value->common_email }}">{{ $value->common_email }}</a></p>
           <p><i class="fas fa-phone"></i> <a href="tel:+{{ preg_replace('/\D+/', '', $value->common_phone) }}">{{ $value->common_phone }}</a></p>
-          <p><i class="fas fa-map-marker-alt"></i> {!! $value->common_address !!}</p>
+          <p><i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/roSFLUKbyJU2" target="_blank">{!! $value->common_address !!}</a></p>
         </div>
       </div>
       <div class="col-md-4 text-right">

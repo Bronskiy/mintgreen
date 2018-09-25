@@ -20,6 +20,9 @@ class CreateAboutTable extends Migration {
             $table->string("about_header_image")->nullable();
             $table->string("about_slogan")->nullable();
             $table->text("about_body")->nullable();
+            $table->string("seo_title")->nullable();
+            $table->string("seo_keywords")->nullable();
+            $table->text("seo_description")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

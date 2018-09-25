@@ -27,6 +27,9 @@ class CreateHomeTable extends Migration {
             $table->text("home_text_block_4")->nullable();
             $table->string("home_image_block_5")->nullable();
             $table->text("home_text_block_5")->nullable();
+            $table->string("seo_title")->nullable();
+            $table->string("seo_keywords")->nullable();
+            $table->text("seo_description")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

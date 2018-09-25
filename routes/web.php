@@ -17,7 +17,7 @@ View::share('footerMenu', App\FooterMenu::get());
 View::share('customCSS', App\CustomCSS::get());
 
 Route::get('/', 'OnePageController@getHome');
-Route::get('/about', 'OnePageController@getAbout');
+Route::get('/company', 'OnePageController@getAbout');
 Route::get('/thank-you', 'OnePageController@getThankYou');
 Route::get('/invest', 'OnePageController@getInvest');
 //Route::get('/products', 'ProductsController@getProductsData');

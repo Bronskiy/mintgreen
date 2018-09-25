@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="105px" height="70px" viewBox="0 0 105 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>programming copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-1137.000000, -209.000000)">
+            <rect fill="#F6F6F6" x="0" y="0" width="1591" height="1636"></rect>
+            <g id="Programming" transform="translate(991.000000, 166.000000)">
+                <g id="programming-copy" transform="translate(146.000000, 43.000000)">
+                    <rect id="Rectangle-14" fill="#00B5D9" opacity="0.800000012" x="4.70149254" y="0" width="95.2835821" height="69.6888889" rx="2.14925373"></rect>
+                    <path d="M0,63.4666667 L43.5844812,63.4666667 L43.5844812,63.4666667 C43.5316314,64.1952098 44.0793891,64.8286538 44.8079323,64.8815036 C44.8397776,64.8838137 44.8716962,64.8849699 44.9036252,64.8849699 L60.0996285,64.8849699 C60.8890552,64.8849699 61.5346584,64.2558301 61.555046,63.4666667 L105,63.4666667 L105,67.8507463 C105,69.0377463 104.037746,70 102.850746,70 L2.14925373,70 C0.962253672,70 2.36581163e-15,69.0377463 2.22044605e-15,67.8507463 L0,63.4666667 Z" id="Rectangle-15" fill="#0B424D"></path>
+                    <g id="Group-2" transform="translate(21.626866, 10.577778)">
+                        <path d="M0.21638228,1.402255 C-0.0955637325,1.05681811 -0.0668190332,0.525336144 0.280585363,0.215156815 C0.62798976,-0.0950225142 1.16249888,-0.0664406084 1.47444489,0.278996288 L6.00744934,5.29866933 C6.30760938,5.6310549 6.29388811,6.13882683 5.97621035,6.45470545 L1.4432059,10.9620376 C1.11305432,11.2903193 0.577772849,11.2903193 0.247621271,10.9620376 C-0.0825303079,10.6337558 -0.0825303079,10.1015058 0.247621271,9.77322404 L4.21411754,5.82919173 L0.21638228,1.402255 Z" id="Path-6" fill="#99FFDD" fill-rule="nonzero"></path>
+                        <path d="M11.694783,5.74422369 L61.2991395,5.74422369" id="Line" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                        <path d="M0.559518165,17.7930831 L61.2991395,17.7930831" id="Line-Copy" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                        <path d="M0.559518165,29.8419426 L61.2991395,29.8419426" id="Line-Copy-2" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                        <path d="M0.559518165,41.8908021 L61.2991395,41.8908021" id="Line-Copy-3" stroke="#66FFCC" stroke-width="1.45074627" stroke-linecap="round"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

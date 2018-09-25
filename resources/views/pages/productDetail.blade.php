@@ -1,14 +1,17 @@
 @extends('layouts.default')
-@section('meta_title', $ProductData->product_title)
-@section('meta_description', '')
-@section('meta_keywords', '')
+
+@section('meta_title', __($ProductData->seo_title))
+@section('meta_keywords', __($ProductData->seo_keywords))
+@section('meta_description', __($ProductData->seo_description))
 
 @section('content')
-<section class="hero-section">
-  <div class="hero-area position-relative overflow-hidden text-center" style="background-image:url('{{ asset('uploads') . '/'.  $ProductData->product_image }}')">
+
+<section class="hero-section product-{{ $ProductData->id }}">
+  <div class="hero-area position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}")'>
     {{-- <h1 class="head-lead">{{ $ProductData->product_title }}</h1> --}}
-    <img src="{{ asset('uploads') . '/'.  $ProductData->product_image }}" alt="background-image" class="hidden-int-image">
+    <img src="{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}" alt="background-image" class="hidden-int-image">
     <img src="{{ asset('uploads') . '/'.  $ProductData->product_circle_image }}" alt="circle-image" class="circle-image">
+    <a class="btn btn-outline-secondary" data-toggle="modal" data-target="#myRequest" href="#">Request a quote</a>
   </div>
 </section>
 
@@ -17,7 +20,7 @@
 <section class="{{ $block->product_block_class }} @if(($loop->iteration) % 2 == 0) bg-light ellipse @endif">
   <div class="container">
     <div class="row">
-      @if(($loop->iteration) % 2 != 0)
+      @if(($loop->iteration) % 2 != 0 && $loop->iteration != 7)
       <div class="col-lg-6 col-md-6">
         <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
       </div>
@@ -28,7 +31,7 @@
           {!! $block->product_block_text !!}
         </div>
       </div>
-      @if(($loop->iteration) % 2 == 0)
+      @if(($loop->iteration) % 2 == 0 || $loop->iteration == 7)
       <div class="col-lg-6 col-md-6">
         <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
       </div>

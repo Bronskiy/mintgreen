@@ -10,7 +10,8 @@ use App\Http\Requests\CreateProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Traits\FileUploadTrait;
-use Intervention\Image\Facades\Image;
+//use Intervention\Image\Facades\Image;
+use Folklore\Image\Facades\Image;
 
 
 
@@ -56,9 +57,10 @@ class ProductController extends Controller {
 			$filename = time() . '-' . $data1['product_block_image']->getClientOriginalName();
 			$file     = $data1['product_block_image'];
 			$image    = Image::make($file);
-			Image::make($file)->resize(50, 50)->save(public_path('uploads/thumb') . '/' . $filename);
-			$width  = $image->width();
-			$height = $image->height();
+			//Image::make($file)->resize(50, 50)->save(public_path('uploads/thumb') . '/' . $filename);
+			Image::make($file,array('width' => 50,'height' => 50))->save(public_path('uploads/thumb') . '/' . $filename);
+			//$width  = $image->width();
+			//$height = $image->height();
 			$image->save(public_path('uploads') . '/' . $filename);
 			$currentProductBlocksFilesData[$index1] = $filename;
 
@@ -136,9 +138,10 @@ class ProductController extends Controller {
 			$filename = time() . '-' . $data1['product_block_image']->getClientOriginalName();
 			$file     = $data1['product_block_image'];
 			$image    = Image::make($file);
-			Image::make($file)->resize(50, 50)->save(public_path('uploads/thumb') . '/' . $filename);
-			$width  = $image->width();
-			$height = $image->height();
+			//Image::make($file)->resize(50, 50)->save(public_path('uploads/thumb') . '/' . $filename);
+			Image::make($file,array('width' => 50,'height' => 50))->save(public_path('uploads/thumb') . '/' . $filename);
+			//$width  = $image->width();
+			//$height = $image->height();
 			$image->save(public_path('uploads') . '/' . $filename);
 
 			if (is_integer($index1)) {

@@ -21,6 +21,9 @@ class CreateProductTable extends Migration {
             $table->string("product_image")->nullable();
             $table->string("product_circle_image")->nullable();
             $table->text("product_specs")->nullable();
+            $table->string("seo_title")->nullable();
+            $table->string("seo_keywords")->nullable();
+            $table->text("seo_description")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

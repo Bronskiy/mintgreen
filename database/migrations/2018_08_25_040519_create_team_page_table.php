@@ -18,6 +18,9 @@ class CreateTeamPageTable extends Migration {
             $table->increments("id");
             $table->string("team_page_title")->nullable();
             $table->string("team_page_header_image")->nullable();
+            $table->string("seo_title")->nullable();
+            $table->string("seo_keywords")->nullable();
+            $table->text("seo_description")->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

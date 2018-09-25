@@ -3,13 +3,13 @@
 @section('content')
 
 @foreach ($InvestData as $value)
-@section('meta_title', $value->invest_title )
-@section('meta_description', '')
-@section('meta_keywords', '')
+@section('meta_title', __($value->seo_title))
+@section('meta_keywords', __($value->seo_keywords))
+@section('meta_description', __($value->seo_description))
 <section class="hero-section">
-  <div class="hero-area invest-hero position-relative overflow-hidden text-center" style="background-image:url('{{ asset('uploads') . '/'.  $value->invest_header_image }}')">
+  <div class="hero-area invest-hero position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop' => 'top_center')) }}")'>
     <h1 class="head-lead">{{ $value->invest_title }}</h1>
-    <img src="{{ asset('uploads') . '/'.  $value->invest_header_image }}" class="hidden-int-image">
+    <img src="{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop')) }}" class="hidden-int-image">
   </div>
 </section>
 <section class="invest-body">

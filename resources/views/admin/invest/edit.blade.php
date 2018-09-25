@@ -22,7 +22,7 @@
     {!! Form::label('invest_title', 'Title*', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::text('invest_title', old('invest_title',$invest->invest_title), array('class'=>'form-control')) !!}
-        
+
     </div>
 </div><div class="form-group">
     {!! Form::label('invest_header_image', 'Header Image', array('class'=>'col-sm-2 control-label')) !!}
@@ -30,16 +30,34 @@
         {!! Form::file('invest_header_image') !!}
         {!! Form::hidden('invest_header_image_w', 4096) !!}
         {!! Form::hidden('invest_header_image_h', 4096) !!}
-        
+
     </div>
 </div><div class="form-group">
     {!! Form::label('invest_body', 'Body', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::textarea('invest_body', old('invest_body',$invest->invest_body), array('class'=>'form-control ckeditor')) !!}
-        
+
     </div>
 </div>
+<div class="form-group">
+    {!! Form::label('seo_title', 'SEO Title', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('seo_title', old('seo_title',$invest->seo_title), array('class'=>'form-control')) !!}
 
+    </div>
+</div><div class="form-group">
+    {!! Form::label('seo_keywords', 'SEO Keywords', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::text('seo_keywords', old('seo_keywords',$invest->seo_keywords), array('class'=>'form-control')) !!}
+
+    </div>
+</div><div class="form-group">
+    {!! Form::label('seo_description', 'SEO Description', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::textarea('seo_description', old('seo_description',$invest->seo_description), array('class'=>'form-control')) !!}
+
+    </div>
+</div>
 <div class="form-group">
     <div class="col-sm-10 col-sm-offset-2">
       {!! Form::submit(trans('quickadmin::templates.templates-view_edit-update'), array('class' => 'btn btn-primary')) !!}

@@ -28,7 +28,10 @@ class Product extends Model implements HasMedia{
           'product_url',
           'product_image',
           'product_circle_image',
-          'product_specs'
+          'product_specs',
+          'seo_title',
+          'seo_keywords',
+          'seo_description'
     ];
 
 

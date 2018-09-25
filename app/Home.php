@@ -20,7 +20,7 @@ class Home extends Model {
     protected $dates = ['deleted_at'];
 
     protected $table    = 'home';
-    
+
     protected $fillable = [
           'home_header_image',
           'home_image_block_1',
@@ -32,9 +32,12 @@ class Home extends Model {
           'home_image_block_4',
           'home_text_block_4',
           'home_image_block_5',
-          'home_text_block_5'
+          'home_text_block_5',
+          'seo_title',
+          'seo_keywords',
+          'seo_description'
     ];
-    
+
 
     public static function boot()
     {
@@ -42,8 +45,8 @@ class Home extends Model {
 
         Home::observe(new UserActionsObserver);
     }
-    
-    
-    
-    
+
+
+
+
 }

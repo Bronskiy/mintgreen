@@ -1,9 +1,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="">
-<meta name="author" content="">
-
-<title>@yield('meta_title') - {{ env('APP_NAME') }}</title>
+@hasSection('meta_title')
+<title>@yield('meta_title')</title>
+@else
+<title>{{ env('APP_NAME') }}</title>
+@endif
 @hasSection('meta_keywords')
 <meta name="keywords" content="@yield('meta_keywords')">
 @endif
@@ -18,6 +19,7 @@
 <link href="/assets/vendor/swiper/css/swiper.min.css" rel="stylesheet">
 @endif
 <link href="/assets/js/plugins/chosen/chosen.min.css" rel="stylesheet">
+<link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/mintgreen.css" rel="stylesheet">
 @foreach ($customCSS as $value)
 <style>

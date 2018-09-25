@@ -3,7 +3,7 @@
 
 
 return array(
-
+    'quality' => 100,
     /*
     |--------------------------------------------------------------------------
     | Default Image Driver
@@ -16,7 +16,7 @@ return array(
     |
     */
     'driver' => 'gd',
-    
+
     /*
     |--------------------------------------------------------------------------
     | Memory limit
@@ -135,7 +135,7 @@ return array(
     |
     */
     'serve_custom_filters_only' => false,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Serve expires
@@ -167,7 +167,7 @@ return array(
     |
     */
     'write_path' => null,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy
@@ -177,13 +177,13 @@ return array(
     |
     */
     'proxy' => false,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy expires
     |--------------------------------------------------------------------------
     |
-    | The expires headers that are sent when proxying image. Defaults to 
+    | The expires headers that are sent when proxying image. Defaults to
     | serve_expires
     |
     */
@@ -198,8 +198,8 @@ return array(
     |
     */
     'proxy_route' => '{image_proxy_pattern}',
-    
-    
+
+
 
     /*
     |--------------------------------------------------------------------------
@@ -221,7 +221,7 @@ return array(
     |
     */
     'proxy_route_domain' => null,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy filesystem
@@ -231,7 +231,7 @@ return array(
     |
     */
     'proxy_filesystem' => 'cloud',
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy temporary directory
@@ -241,7 +241,7 @@ return array(
     |
     */
     'proxy_write_image' => true,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy cache
@@ -252,7 +252,7 @@ return array(
     |
     */
     'proxy_cache' => true,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy cache filesystem
@@ -263,7 +263,7 @@ return array(
     |
     */
     'proxy_cache_filesystem' => null,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy cache expiration
@@ -274,7 +274,7 @@ return array(
     |
     */
     'proxy_cache_expiration' => 60*24,
-    
+
     /*
     |--------------------------------------------------------------------------
     | Proxy temporary path

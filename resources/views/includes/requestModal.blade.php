@@ -25,7 +25,7 @@
               {!! Form::email('requests_email', old('requests_email'), array('class'=>'form-control', 'placeholder' => 'E-mail')) !!}
             </div>
             <div class="col-sm-4">
-              {!! Form::text('requests_phone', old('requests_phone'), array('class'=>'form-control', 'placeholder' => 'Phone')) !!}
+              {!! Form::text('requests_phone', old('requests_phone'), array('class'=>'form-control', 'id'=>'phone', 'placeholder' => 'Phone')) !!}
             </div>
           </div>
         </div>
@@ -62,41 +62,48 @@
           <div class="row">
             <div class="col-sm-3 offset-sm-2">
               <div class="form-group">
-                <select name="requests_province" id="state" class="form-control" style="width:350px"></select>
+                {!! Form::text('requests_city', old('requests_city'), array('class'=>'form-control', 'placeholder' => 'City')) !!}
               </div>
             </div>
             <div class="col-sm-3">
               <div class="form-group">
-                <select name="requests_city" id="city" class="form-control" style="width:350px"></select>
+                <select name="requests_province" id="state" class="form-control" style="width:350px"></select>
               </div>
             </div>
-            <div class="col-sm-2">
-              {!! Form::text('requests_postal', old('requests_postal'), array('class'=>'form-control', 'placeholder' => 'Postal / ZIP')) !!}
+            {{--
+              <div class="col-sm-3">
+                <div class="form-group">
+                  <select name="requests_city" id="city" class="form-control" style="width:350px"></select>
+                </div>
+              </div>
+              --}}
+              <div class="col-sm-2">
+                {!! Form::text('requests_postal', old('requests_postal'), array('class'=>'form-control', 'placeholder' => 'Postal / ZIP')) !!}
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-group pt45">
-          <div class="row">
-            <div class="col-sm-4 offset-sm-2">
-              <select name="products" id="products" class="product-select form-control" style="width:350px"></select>
+          <div class="form-group pt45">
+            <div class="row">
+              <div class="col-sm-4 offset-sm-2">
+                <select name="products" id="products" class="product-select form-control" style="width:350px"></select>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-group pt45">
-          <div class="row">
-            {!! Form::label('requests_comment', 'Additional comments to help us with your request', array('class'=>'col-sm-5 offset-sm-2 control-label')) !!}
-            <div class="col-sm-5 offset-sm-2">
-              {!! Form::textarea('requests_comment', old('requests_comment'), array('class'=>'form-control', 'rows'=>'4')) !!}
+          <div class="form-group pt45">
+            <div class="row">
+              {!! Form::label('requests_comment', 'Additional comments to help us with your request', array('class'=>'col-sm-5 offset-sm-2 control-label')) !!}
+              <div class="col-sm-5 offset-sm-2">
+                {!! Form::textarea('requests_comment', old('requests_comment'), array('class'=>'form-control', 'rows'=>'4')) !!}
+              </div>
             </div>
           </div>
-        </div>
-        <div class="form-group text-center">
-          <div class="col-sm-12">
-            {!! Form::submit( 'Submit' , array('class' => 'btn btn-request')) !!}
+          <div class="form-group text-center">
+            <div class="col-sm-12">
+              {!! Form::submit( 'Submit' , array('class' => 'btn btn-request')) !!}
+            </div>
           </div>
+          {!! Form::close() !!}
         </div>
-        {!! Form::close() !!}
       </div>
     </div>
   </div>
-</div>

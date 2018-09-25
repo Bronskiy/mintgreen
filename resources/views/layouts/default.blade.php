@@ -17,7 +17,9 @@
   @endif
   <script src="/assets/vendor/jquery/jquery.min.js"></script>
   <script type="text/javascript" src="/assets/js/plugins/chosen/chosen.jquery.min.js"></script>
+  <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
   <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="/assets/js/wow.min.js"></script>
   <script src="/assets/js/main.js"></script>
   @if(Request::is('product'))
   <script src="/assets/vendor/swiper/js/swiper.min.js"></script>
@@ -44,6 +46,15 @@
   @endif
   @if(Request::is('team'))
   <script type="text/javascript">
+  jQuery(document).ready(function($) {
+    if (window.history && window.history.pushState) {
+      window.history.pushState('back', null, '/team');
+      $(window).on('popstate', function() {
+        $('#memberModal').modal('toggle');
+      });
+    }
+
+  });
   var infoModal = $('#memberModal');
   $('.team-item-container').on('click', function(){
     $.ajax({
@@ -69,7 +80,18 @@
   </script>
   @endif
   <script type="text/javascript">
-
+  jQuery(document).ready(function($) {
+    wow = new WOW(
+      {
+        boxClass:     'wow',      // default
+        animateClass: 'animated', // default
+        offset:       0,          // default
+        mobile:       false,       // default
+        live:         true        // default
+      }
+    )
+    wow.init();
+  });
   /* =====================================================================
   Select Box
   ===================================================================== */
@@ -112,7 +134,7 @@ function gfortSelectfn(selectClass) {
 }
 gfortSelectfn('select');
 
-$("#state").append('<option>Province/State</option>');
+$("#state").append('<option>Province / State</option>');
 $("#city").append('<option>City</option>');
 $.ajax({
   type:"GET",
@@ -143,7 +165,7 @@ $('#country').change(function(){
         if(res){
           $("#state").empty();
           $("#city").empty();
-          $("#state").append('<option>Province/State</option>');
+          $("#state").append('<option>Province / State</option>');
           $("#city").append('<option>City</option>');
           $("#state, #city").trigger("chosen:updated");
           $.each(res,function(key,value){
@@ -199,8 +221,11 @@ $('#state').on('change',function(){
   }
 
 });
+jQuery(document).ready(function ($) {
 
+  $("#state, #city").trigger("chosen:updated");
 
+});
 </script>
 {!! NoCaptcha::renderJs() !!}
 </body>

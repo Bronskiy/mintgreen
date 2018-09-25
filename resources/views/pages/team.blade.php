@@ -1,12 +1,16 @@
 @extends('layouts.default')
-@section('meta_title', 'Team')
 
 @section('content')
+
 @foreach ($TeamPage as $value)
-<section class="hero-section">
-  <div class="hero-area position-relative overflow-hidden text-center" style="background-image:url('{{ asset('uploads') . '/'.  $value->team_page_header_image }}')">
+@section('meta_title', __($value->seo_title))
+@section('meta_keywords', __($value->seo_keywords))
+@section('meta_description', __($value->seo_description))
+<section class="hero-section team-page">
+  <div class="hero-area position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $value->team_page_header_image,1613,641,array('crop')) }}")'>
     <h1 class="head-lead team-head-lead">{{ $value->team_page_title }}</h1>
-    <img src="{{ asset('uploads') . '/'.  $value->team_page_header_image }}" class="hidden-int-image">
+    {{--<img src="{{ asset('uploads') . '/'.  $value->team_page_header_image }}" class="hidden-int-image">--}}
+    <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_page_header_image,1613,641,array('crop')) }}" class="hidden-int-image">
   </div>
 </section>
 @endforeach
@@ -23,10 +27,10 @@
     </div>
     <div class="row">
       @endif
-      <div class="col-md-6 team-item">
+      <div class="@if(($loop->index)%2 == 0)col-lg-5 offset-lg-1 @else col-lg-5 offset-lg-1 @endif col-md-6 team-item wow fadeIn" data-wow-duration="1s" data-wow-delay="2s">
         <div class="team-item-container" data-id="{{ $value->id }}">
           @if($value->team_member_photo)
-          <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_member_photo,240,240,array('crop')) }}" alt="{{ $value->team_member_name }}">
+          <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_member_photo,240,240,array('crop' => 'top_center')) }}" alt="{{ $value->team_member_name }}">
           @else
           <img src="http://via.placeholder.com/240?text=user" alt="{{ $value->team_member_name }}">
           @endif
