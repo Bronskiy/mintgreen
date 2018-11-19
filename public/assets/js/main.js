@@ -4,10 +4,13 @@
 
   jQuery(document).ready(function ($) {
 
+    $('.parallax-window').paroller();
+
     $('#myRequest').on('shown.bs.modal', function () {
       $('#myInput').trigger('focus')
     });
     $("#phone").inputmask({"mask": "(999) 999-9999"});
+
   });
 
   /* =========================================================================

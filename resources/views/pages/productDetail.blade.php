@@ -7,12 +7,17 @@
 @section('content')
 
 <section class="hero-section product-{{ $ProductData->id }}">
-  <div class="hero-area position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}")'>
-    {{-- <h1 class="head-lead">{{ $ProductData->product_title }}</h1> --}}
-    <img src="{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}" alt="background-image" class="hidden-int-image">
+  <div class="hero-area position-relative overflow-hidden text-center parallax-window"
+  style="background: url('{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}') no-repeat center; background-size: cover;"
+  data-paroller-factor="0.5"
+  data-paroller-factor-xs="0.2">
+  <div class="hero-area-inner">
+    {{-- <h1 class="head-lead">{{ $ProductData->product_title }}</h1>
+    <img src="{{ Image::url(asset('uploads') . '/'.  $ProductData->product_image,1613,641,array('crop')) }}" alt="background-image" class="hidden-int-image">--}}
     <img src="{{ asset('uploads') . '/'.  $ProductData->product_circle_image }}" alt="circle-image" class="circle-image">
     <a class="btn btn-outline-secondary" data-toggle="modal" data-target="#myRequest" href="#">Request a quote</a>
   </div>
+</div>
 </section>
 
 
@@ -22,7 +27,7 @@
     <div class="row">
       @if(($loop->iteration) % 2 != 0 && $loop->iteration != 7)
       <div class="col-lg-6 col-md-6">
-        <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
+        <img class="img-fluid wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.5s" src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
       </div>
       @endif
       <div class="col-lg-6 col-md-6">
@@ -33,7 +38,7 @@
       </div>
       @if(($loop->iteration) % 2 == 0 || $loop->iteration == 7)
       <div class="col-lg-6 col-md-6">
-        <img class="img-fluid " src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
+        <img class="img-fluid wow zoomIn" data-wow-duration="1.5s" data-wow-delay="0.5s" src="{{ asset('uploads') . '/'.  $block->product_block_image }}" alt="{{ $block->product_block_title }}">
       </div>
       @endif
     </div>

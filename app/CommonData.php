@@ -29,7 +29,10 @@ class CommonData extends Model {
           'common_linked_in',
           'common_twitter',
           'common_facebook',
-          'common_instagram'
+          'common_instagram',
+          'common_google_analytics',
+          'common_google_tag_head',
+          'common_google_tag_bottom'
     ];
 
 

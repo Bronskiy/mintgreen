@@ -31,7 +31,7 @@
         </div>
         <div class="form-group pt45">
           <div class="row">
-            <div class="col-sm-4 offset-sm-2">
+            <div class="col-sm-8 offset-sm-2 col-md-4 offset-md-2">
               <select class="country-select" name="requests_country" id="country">
                 <option selected="true" disabled="disabled">Country</option>
                 <option value="Canada">Canada</option>
@@ -60,31 +60,31 @@
         </div>
         <div class="form-group">
           <div class="row">
-            <div class="col-sm-3 offset-sm-2">
+            <div class="col-sm-8 offset-sm-2 col-md-3 offset-md-2">
               <div class="form-group">
                 {!! Form::text('requests_city', old('requests_city'), array('class'=>'form-control', 'placeholder' => 'City')) !!}
               </div>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-8 offset-sm-2 col-md-3 offset-md-0">
               <div class="form-group">
                 <select name="requests_province" id="state" class="form-control" style="width:350px"></select>
               </div>
             </div>
             {{--
-              <div class="col-sm-3">
+              <div class="col-sm-8 offset-sm-2 col-md-3 offset-md-0">
                 <div class="form-group">
                   <select name="requests_city" id="city" class="form-control" style="width:350px"></select>
                 </div>
               </div>
               --}}
-              <div class="col-sm-2">
+              <div class="col-sm-8 offset-sm-2 col-md-2 offset-md-0">
                 {!! Form::text('requests_postal', old('requests_postal'), array('class'=>'form-control', 'placeholder' => 'Postal / ZIP')) !!}
               </div>
             </div>
           </div>
           <div class="form-group pt45">
             <div class="row">
-              <div class="col-sm-4 offset-sm-2">
+              <div class="col-sm-8 offset-sm-2 col-md-4 offset-md-2">
                 <select name="products" id="products" class="product-select form-control" style="width:350px"></select>
               </div>
             </div>

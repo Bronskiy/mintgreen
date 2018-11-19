@@ -6,11 +6,16 @@
 @section('meta_title', __($value->seo_title))
 @section('meta_keywords', __($value->seo_keywords))
 @section('meta_description', __($value->seo_description))
-<section class="hero-section">
-  <div class="hero-area invest-hero position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop' => 'top_center')) }}")'>
+<section class="hero-section invest-page">
+  <div class="hero-area invest-hero position-relative overflow-hidden text-center parallax-window"
+  style="background: url('{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop' => 'top_center')) }}') no-repeat center; background-size: cover;"
+  data-paroller-factor="0.5"
+  data-paroller-factor-xs="0.2">
+  <div class="hero-area-inner">
     <h1 class="head-lead">{{ $value->invest_title }}</h1>
-    <img src="{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop')) }}" class="hidden-int-image">
   </div>
+  {{-- <img src="{{ Image::url(asset('uploads') . '/'.  $value->invest_header_image,1613,641,array('crop')) }}" class="hidden-int-image"> --}}
+</div>
 </section>
 <section class="invest-body">
   <div class="container">

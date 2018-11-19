@@ -26,7 +26,13 @@ class OnePageController extends Controller
 
   public function getThankYou()
   {
-    $data['ThankYou'] = ThankYou::all();
+    $data['ThankYou'] = ThankYou::where('id', 1)->get();
+    return view('pages.thankYou',$data);
+  }
+
+  public function getSuccess()
+  {
+    $data['ThankYou'] = ThankYou::where('id', 2)->get();
     return view('pages.thankYou',$data);
   }
 

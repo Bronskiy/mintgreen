@@ -7,11 +7,14 @@
 @section('meta_keywords', __($value->seo_keywords))
 @section('meta_description', __($value->seo_description))
 <section class="hero-section team-page">
-  <div class="hero-area position-relative overflow-hidden text-center" style='background-image:url("{{ Image::url(asset('uploads') . '/'.  $value->team_page_header_image,1613,641,array('crop')) }}")'>
+  <div class="hero-area position-relative overflow-hidden text-center parallax-window"
+  style="background: url('{{ Image::url(asset('uploads') . '/'.  $value->team_page_header_image,1613,641,array('crop')) }}') no-repeat center; background-size: cover;"
+  data-paroller-factor="0.5"
+  data-paroller-factor-xs="0.2">
+  <div class="hero-area-inner">
     <h1 class="head-lead team-head-lead">{{ $value->team_page_title }}</h1>
-    {{--<img src="{{ asset('uploads') . '/'.  $value->team_page_header_image }}" class="hidden-int-image">--}}
-    <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_page_header_image,1613,641,array('crop')) }}" class="hidden-int-image">
   </div>
+</div>
 </section>
 @endforeach
 @foreach ($TeamData as $key=>$teamCategory)
@@ -27,7 +30,7 @@
     </div>
     <div class="row">
       @endif
-      <div class="@if(($loop->index)%2 == 0)col-lg-5 offset-lg-1 @else col-lg-5 offset-lg-1 @endif col-md-6 team-item wow fadeIn" data-wow-duration="1s" data-wow-delay="2s">
+      <div class="@if(($loop->index)%2 == 0)col-lg-5 offset-lg-1 @else col-lg-5 offset-lg-1 @endif col-md-6 team-item wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
         <div class="team-item-container" data-id="{{ $value->id }}">
           @if($value->team_member_photo)
           <img src="{{ Image::url(asset('uploads') . '/'.  $value->team_member_photo,240,240,array('crop' => 'top_center')) }}" alt="{{ $value->team_member_name }}">
@@ -37,7 +40,6 @@
           <div class="team-item-description">
             <h4>{{ $value->team_member_name }}</h4>
             <h5>{{ $value->team_member_position }}</h5>
-            <p><a href="{{ $value->team_member_linkedin }}" class="linkedin-link"><i class="fab fa-linkedin"></i></a></p>
           </div>
         </div>
       </div>

@@ -58,6 +58,9 @@ h1.head-lead{
   width: 100%;
   color: #fff;
 }
+ol{
+  padding-inline-start: 120px;
+}
 /*==============================================================*/
 .some-class-243{
   font-family: 'Roboto', sans-serif;
@@ -95,6 +98,17 @@ h1.head-lead{
 .pt45{
   padding-top: 45px;
 }
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url('https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_7.gif') center no-repeat #fff;
+}
 /*======================================
 01. Header
 ========================================*/
@@ -110,6 +124,15 @@ h1.head-lead{
   border-bottom-right-radius: 80% 20%;
   margin: 0 -50px;
 }
+.hero-area-inner {
+  height: 600px;
+}
+/*
+.parallax-mirror {
+border-bottom-left-radius: 80% 20%;
+border-bottom-right-radius: 80% 20%;
+}
+*/
 .hero-area .head-lead{
   position: absolute;
 }
@@ -136,7 +159,7 @@ h1.head-lead{
   padding: 5px 25px;
 }
 .product-12 .hero-area .btn{
-  bottom: 13vw;
+  bottom: 10vw;
   left: 32vw;
   padding: 5px 2vw;
 }
@@ -387,8 +410,8 @@ section.block-5 .home-text-block-5{
 ========================================*/
 .circle-image{
   position: absolute;
-  top: 7vw;
-  right: 50%;
+  top: 6vw;
+  right: 47%;
   width: 30vw;
 }
 .caddy-1{
@@ -520,10 +543,12 @@ section.block-5 .home-text-block-5{
 .swiper-button-next.swiper-button-black,
 .swiper-container-rtl .swiper-button-prev.swiper-button-black {
   background-image: url('/assets/img/right.png');
+  outline: none;
 }
 .swiper-button-prev.swiper-button-black,
 .swiper-container-rtl .swiper-button-next.swiper-button-black{
   background-image: url('/assets/img/left.png');
+  outline: none;
 }
 .gallery-top {
   height: 500px;
@@ -593,7 +618,7 @@ section.block-5 .home-text-block-5{
   margin: 25px auto;
 }
 .modal .close{
-  border: 2px solid #ffffff;
+  border: 2px solid transparent;
   border-radius: 50%;
   width: 55px;
   height: 55px;
@@ -791,7 +816,7 @@ select.gfort-chosen-select.error+label.error+.chosen-container .chosen-single,
 .invest-contacts a{
   font-size: 18px;
   color:#0b4258;
-  border-bottom: 2px solid #00bf80;
+  /* border-bottom: 2px solid #00bf80; */
   padding-bottom: 7px;
   vertical-align:middle;
 }
@@ -813,6 +838,22 @@ select.gfort-chosen-select.error+label.error+.chosen-container .chosen-single,
 }
 .email-holder p{
   text-align: right;
+}
+.email-holder a,
+.email-holder svg,
+.phone-holder a,
+.phone-holder svg{
+  top: 0;
+  transition: top 150ms linear;
+  -webkit-transition: top 150ms linear;
+}
+.email-holder:hover a,
+.email-holder:hover svg,
+.phone-holder:hover a,
+.phone-holder:hover svg{
+  color: #66ffcc;
+  position: relative;
+  top: -15px;
 }
 /*======================================
 07. Team
@@ -1043,6 +1084,12 @@ footer ul.social-bottom li a:hover {
   font-weight: bold;
   text-transform: uppercase;
 }
+.subscribe-form .input-group .btn:active,
+.subscribe-form .input-group .btn:hover{
+  background-color: #66ffcc;
+  color: #ffffff;
+  border: 1px solid #66ffcc;
+}
 .subscribe-form .input-group .form-control{
   background-color: transparent;
   border: 1px solid transparent;
@@ -1084,6 +1131,13 @@ footer ul.social-bottom li a:hover {
 }
 
 @media (min-width: 1600px) {
+  .modal-dialog{
+    position: fixed;
+  }
+  .modal-right-side{
+    overflow-y: scroll;
+    height: 100%;
+  }
   section.block-2 img{
     left: 30px;
   }
@@ -1092,7 +1146,7 @@ footer ul.social-bottom li a:hover {
     max-width: 1000px;
   }
   .home-page .hero-area .btn{
-    bottom: 60px;
+    bottom: 45px;
     left: 530px;
   }
   .hero-area .head-lead{
@@ -1100,7 +1154,7 @@ footer ul.social-bottom li a:hover {
     font-size: 150px;
   }
   .home-page .hero-area .head-lead{
-    bottom: 100px;
+    bottom: 75px;
     left: 530px;
     font-size: 1rem;
     top: unset;
@@ -1117,8 +1171,10 @@ footer ul.social-bottom li a:hover {
     right: 850px;
   }
   .product-12 .hero-area .btn{
-    left: 430px;
-    bottom: 135px;
+    right: 971px;
+    left: unset;
+    bottom: 120px;
+
     padding: 5px 35px;
   }
   section.block-3 img{
@@ -1183,8 +1239,38 @@ footer ul.social-bottom li a:hover {
 ##Screen = 1281px to higher resolution desktops
 */
 
-@media (min-width: 1281px) {
-
+@media (min-width: 1281px) and (max-width: 1599px) {
+  .modal-dialog{
+    position: fixed;
+  }
+  .modal-right-side{
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .team-category.first {
+    margin-top: -112px;
+  }
+  .header-image {
+    top: 144px;
+    width: 1000px;
+  }
+  .home-page .hero-area .btn{
+    bottom: 65px;
+    left: 33%;
+  }
+  .home-page .hero-area .head-lead{
+    bottom: 100px;
+    left: 33%;
+  }
+  .circle-image {
+    top: 100px;
+    width: 430px;
+    left: 350px;
+  }
+  .product-12 .hero-area .btn {
+    bottom: 160px;
+    left: 475px;
+  }
 }
 
 /*
@@ -1193,6 +1279,35 @@ footer ul.social-bottom li a:hover {
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
+  .modal-dialog{
+    position: fixed;
+  }
+  .modal-right-side{
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .team-category.first {
+    margin-top: -110px;
+  }
+  .hero-area,
+  .hero-area-inner {
+    height: 510px;
+  }
+  .header-image{
+    top: 100px;
+    width: 930px;
+  }
+  .home-page .hero-area .head-lead{
+    bottom: 85px;
+  }
+  .home-page .hero-area .btn {
+    bottom: 50px;
+  }
+  .circle-image {
+    top: 100px;
+    right: 650px;
+    width: 380px;
+  }
   .about-slogan{
     padding: 5.1vw 0 30px;
   }
@@ -1210,6 +1325,11 @@ footer ul.social-bottom li a:hover {
   }
   .team-item-description {
     max-width: 228px;
+  }
+  .product-12 .hero-area .btn {
+    bottom: 90px;
+    left: unset;
+    right: 750px;
   }
 }
 
@@ -1240,7 +1360,27 @@ footer ul.social-bottom li a:hover {
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+  .modal-dialog{
+    position: fixed;
+  }
+  .modal-right-side{
+    overflow-y: scroll;
+    height: 100%;
+  }
+  .hero-area,
+  .hero-area-inner {
+    height: 310px;
+  }
+  .circle-image {
+    top: 15px;
+    right: unset;
+    width: 280px;
+    left: 298px;
+  }
+  .product-12 .hero-area .btn {
+    bottom: 60px;
+    left: 350px;
+  }
   .team-item-description{
     max-width: 228px;
   }
@@ -1251,8 +1391,14 @@ footer ul.social-bottom li a:hover {
     top: unset;
   }
   .header-image {
-    top: 4vw;
-    width: 81vw;
+    top: 18px;
+    width: 660px;
+  }
+  .home-page .hero-area .btn{
+    bottom: 15px;
+  }
+  .home-page .hero-area .head-lead{
+    bottom: 40px;
   }
   section.block-1 {
     padding: 100px 0 75px;
@@ -1319,8 +1465,23 @@ footer ul.social-bottom li a:hover {
 */
 
 @media (min-width: 481px) and (max-width: 767px) {
+  ol{
+    padding-inline-start: 40px;
+  }
   body{
     margin-bottom: 555px;
+  }
+  .circle-image{
+    top: 22px;
+  }
+  .hero-area-inner,
+  .hero-area{
+    height: 36vw;
+  }
+
+  .team-page .hero-area-inner,
+  .team-page .hero-area{
+    height: 39vw;
   }
   footer{
     height: 555px;
@@ -1346,7 +1507,7 @@ footer ul.social-bottom li a:hover {
     padding: 10px 0 5px;
   }
   .hero-section{
-    margin-top: 100px;
+    margin-top: 116px;
   }
   .home-page .hero-area .head-lead{
     font-family: 'Lato', sans-serif;
@@ -1363,7 +1524,7 @@ footer ul.social-bottom li a:hover {
     display: none;
   }
   .home-page .header-image{
-    top: 14vw;
+    top: 4vw;
   }
   section.block-1 {
     padding: 275px 0 50px;
@@ -1577,8 +1738,22 @@ footer ul.social-bottom li a:hover {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
+  ol{
+    padding-inline-start: 40px;
+  }
   body{
     margin-bottom: 610px;
+  }
+  .hero-area,
+  .hero-area-inner {
+    border-bottom-left-radius: 60% 40%;
+    border-bottom-right-radius: 60% 40%;
+    height: 48vw;
+    margin: 0 -150px;
+  }
+  .team-page .hero-area{
+    height: 60vw;
+    min-height: 220px;
   }
   footer{
     height: 610px;
@@ -1606,12 +1781,12 @@ footer ul.social-bottom li a:hover {
     padding: 10px 0 5px;
   }
   .hero-section{
-    margin-top: 100px;
+    margin-top: 113px;
   }
   .home-page .hero-area .head-lead{
     font-family: 'Lato', sans-serif;
     bottom: -38vw;
-    left: 21vw;
+    left: 46vw;
     color: #00bf80;
     font-size: 25px;
     font-weight: bold;
@@ -1627,11 +1802,7 @@ footer ul.social-bottom li a:hover {
     top: 11vw;
     width: 90vw;
   }
-  .hero-area.invest-hero{
-    border-bottom-left-radius: 70% 30%;
-    border-bottom-right-radius: 70% 30%;
-    margin: 0 -35px;
-  }
+
   .hero-section.team-page {
     margin-top: 116px;
   }
@@ -1676,7 +1847,7 @@ footer ul.social-bottom li a:hover {
     padding: 75vw 0 50px;
   }
   section.block-5 img{
-    top: -129vw;
+    top: -575px;
     width: 90%;
   }
   section.block-1 .home-text-block-1,
@@ -1702,7 +1873,7 @@ footer ul.social-bottom li a:hover {
     line-height: 24px;
   }
   .circle-image{
-    width: 40vw;
+    width: 33vw;
   }
   .product-specs.ellipse{
     padding: 50px;
@@ -1790,6 +1961,10 @@ footer ul.social-bottom li a:hover {
     border-top-left-radius: 90% 10%;
     border-top-right-radius: 90% 10%;
   }
+  .team-page .ellipse{
+    border-top-left-radius: 82% 8%;
+    border-top-right-radius: 82% 8%;
+  }
   .ellipse-top {
     border-top-left-radius: 95% 5%;
     border-top-right-radius: 95% 5%;
@@ -1846,8 +2021,23 @@ footer ul.social-bottom li a:hover {
   }
 }
 @media (max-width: 400px){
+  ol{
+    padding-inline-start: 40px;
+  }
+  .caddy-4 img{
+    left: 91px;
+  }
+  .caddy-5 img {
+    height: 75vw;
+  }
   body{
     margin-bottom: 610px;
+  }
+  .hero-area-inner {
+    height: 155px;
+  }
+  .invest-page .hero-area-inner {
+    height: 145px;
   }
   footer{
     height: 610px;

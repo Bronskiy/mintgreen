@@ -15,10 +15,12 @@ View::share('сommonData', App\CommonData::get());
 View::share('mainMenu', App\MainMenu::get());
 View::share('footerMenu', App\FooterMenu::get());
 View::share('customCSS', App\CustomCSS::get());
+View::share('socialLinks', App\SocialLinks::orderBy('social_links_order', 'asc')->get());
 
 Route::get('/', 'OnePageController@getHome');
 Route::get('/company', 'OnePageController@getAbout');
 Route::get('/thank-you', 'OnePageController@getThankYou');
+Route::get('/success', 'OnePageController@getSuccess');
 Route::get('/invest', 'OnePageController@getInvest');
 //Route::get('/products', 'ProductsController@getProductsData');
 //Route::get('/product/{name?}', 'ProductsController@getProduct');

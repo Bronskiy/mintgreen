@@ -57,7 +57,7 @@ class RequestsController extends Controller
     Newsletter::subscribe($request->subscriber_email);
 
     Subscribers::create($request->all());
-    return redirect('/thank-you');
+    return redirect('/success');
   }
   public function getProductList()
   {

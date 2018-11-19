@@ -42,28 +42,23 @@
         {!! Form::text('common_address', old('common_address',$commondata->common_address), array('class'=>'form-control')) !!}
 
     </div>
-</div><div class="form-group">
-    {!! Form::label('common_linked_in', 'Linked In', array('class'=>'col-sm-2 control-label')) !!}
+</div>
+<div class="form-group">
+    {!! Form::label('common_google_analytics', 'Google Analytics', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('common_linked_in', old('common_linked_in',$commondata->common_linked_in), array('class'=>'form-control')) !!}
+        {!! Form::textarea('common_google_analytics', old('common_google_analytics',$commondata->common_google_analytics), array('class'=>'form-control')) !!}
 
     </div>
 </div><div class="form-group">
-    {!! Form::label('common_twitter', 'Twitter', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('common_google_tag_head', 'Google Tag Manager HEAD', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('common_twitter', old('common_twitter',$commondata->common_twitter), array('class'=>'form-control')) !!}
+        {!! Form::textarea('common_google_tag_head', old('common_google_tag_head',$commondata->common_google_tag_head), array('class'=>'form-control')) !!}
 
     </div>
 </div><div class="form-group">
-    {!! Form::label('common_facebook', 'Facebook', array('class'=>'col-sm-2 control-label')) !!}
+    {!! Form::label('common_google_tag_bottom', 'Google Tag Manager BODY', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
-        {!! Form::text('common_facebook', old('common_facebook',$commondata->common_facebook), array('class'=>'form-control')) !!}
-
-    </div>
-</div><div class="form-group">
-    {!! Form::label('common_instagram', 'Instagram', array('class'=>'col-sm-2 control-label')) !!}
-    <div class="col-sm-10">
-        {!! Form::text('common_instagram', old('common_instagram',$commondata->common_instagram), array('class'=>'form-control')) !!}
+        {!! Form::textarea('common_google_tag_bottom', old('common_google_tag_bottom',$commondata->common_google_tag_bottom), array('class'=>'form-control')) !!}
 
     </div>
 </div>
